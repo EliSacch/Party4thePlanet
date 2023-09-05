@@ -1,3 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:ital@0;1&display=swap");
+
 body {
-  background: green;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  height: 100vh;
+  --main-color: #f8fff8;
+  --secondary-color: #68edcb;
+  --accent-color: #62f079;
+  font-family: "Bungee", cursive;
+  font-family: "Rubik", sans-serif;
+  background: var(--main-color);
+}
+
+.heroLandingPage {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 70% 30%;
+  grid-template-areas:
+    "mt lo"
+    "ws lo";
+  height: 80vh;
+  margin-top: 5vh;
+}
+.mainTitle {
+  font-family: "Bungee";
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 9em;
+  line-height: 140px;
+  grid-area: mt;
+}
+.sentenceContainer {
+  background-color: var(--accent-color);
+  height: 50%;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  border-radius: 22px;
+  border: 25px double var(--main-color);
+  grid-area: ws;
+}
+.welcomeSentence {
+  text-align: center;
+  font-family: "Rubik";
+  font-style: italic;
+  color: var(--main-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.logo {
+  grid-area: lo;
+  width: 100%;
+  margin: 5% auto auto -5%;
+  border-radius: 50%;
+}
+.transitionButton {
+  display: block;
+  font-size: 2rem;
+  margin: 0 auto;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+}
+.transitionButton:hover {
+  width: 120px;
+  height: 120px;
+  border: 5px double var(--main-color);
 }

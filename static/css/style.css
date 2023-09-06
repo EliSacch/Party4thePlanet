@@ -6,9 +6,9 @@ body {
   list-style-type: none;
   box-sizing: border-box;
   height: 100vh;
-  --main-color: #f8fff8;
-  --secondary-color: #68edcb;
-  --accent-color: #62f079;
+  --main-color: #e7fefe;
+  --secondary-color: #106751;
+  --accent-color: #00a97c;
   font-family: "Bungee Shade ", cursive;
   font-family: "Rubik", sans-serif;
   background: var(--main-color);

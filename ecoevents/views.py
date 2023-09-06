@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Ecoevent
+from .forms import EcoeventForm
+from django.contrib import messages
 
 
 def home(request):
@@ -26,3 +28,17 @@ def event(request, event_id):
 def map(request):
     context = {}
     return render(request, 'map.html', context)
+
+
+def createEvent(request):
+    form = EcoeventForm()
+
+    if request.method == 'POST':
+        form = EcoeventForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Event created successfully!')
+            return redirect('events')
+
+    context = {'form': form}
+    return render(request, 'event_form.html', context)

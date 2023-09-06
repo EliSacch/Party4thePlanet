@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+<!--
+    This is the home page of the website.
+-->
+
+{% block content %}
+
+<!-- Edit this section -->
+<h1>Events</h1>
+
+{% if all_events %}
+    <ul>
+    {% for event in all_events %}
+        <li><a href="{% url 'event' event.id %}">{{ event }}</a></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{%endblock%}

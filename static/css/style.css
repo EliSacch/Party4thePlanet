@@ -194,11 +194,11 @@ a {
 }
 .eventsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0 80px;
 }
 .leftSide {
-  width: 40%;
+  width: 35%;
   font-family: "Rubik";
 }
 .leftSide ul {
@@ -210,24 +210,24 @@ a {
   padding: 10px;
   border: 2px solid var(--secondary-color);
   border-radius: 40px;
+  list-style-type: none;
 }
 .eventNameBackground {
+}
+.eventName {
   background-color: var(--accent-color);
   border-radius: 40px;
   width: 80%;
   margin: 0 auto;
   border: 5px double var(--secondary-color);
-}
-.eventName {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
+  color: var(--main-color);
+  text-align: center;
+  font-size: 20px;
+  padding: 0 10px;
 }
 .eventName a {
   color: var(--main-color);
   text-align: center;
-  font-size: 2rem;
-  padding: 10px;
 }
 .eventDetails {
   display: flex;
@@ -235,8 +235,73 @@ a {
   color: var(--secondary-color);
 }
 .rightSide {
-  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+  border: 5px solid var(--secondary-color);
+  border-radius: 40px;
 }
+.eventImageContainer {
+}
+.eventImageContainer img {
+  height: 200px;
+}
+.eventDetailsContainer {
+  width: 100%;
+}
+.eventInformations {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 22% 22% 56%;
+  grid-template-areas:
+    "st st pa pa en en"
+    "lo lo lo eo eo eo"
+    "des des des des des des ";
+  text-align: center;
+  padding: 5px;
+}
+.eventStartTime {
+  grid-area: st;
+}
+.eventEndTime {
+  grid-area: en;
+}
+.eventParticipantsCounter {
+  grid-area: pa;
+}
+.eventLocation {
+  grid-area: lo;
+}
+.eventOrganiser {
+  grid-area: eo;
+}
+.eventDescription {
+  grid-area: des;
+}
+
+.eventButtonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.eventButtonsContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bungee Shade";
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  border-radius: 22px;
+  width: 25%;
+  height: 50px;
+  font-size: 1.5rem;
+}
+/* MAP  */
 .mapElementContainer {
   display: flex;
   justify-content: space-around;

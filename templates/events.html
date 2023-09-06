@@ -46,15 +46,15 @@
       {% for event in events %}
       <div class="eventContainer">
         <div class="eventNameBackground">
-          <li class="eventName">
+          <div class="eventName">
             <a href="{% url 'event' event.id %}">{{ event }}</a>
-          </li>
+          </div>
         </div>
         <div class="eventDetails">
           <p class="eventStart">Start date : {{event.start_datetime}}</p>
           <p class="eventLocation">Location : {{event.location}}</p>
         </div>
-      </div>
+      </li>
       {% endfor %}
     </ul>
     {% endif %}
@@ -78,7 +78,37 @@
       {% endfor %} -->
 
     <!-- Ideas for what the code should like  -->
-    <h1>Future Card</h1>
+    <div class="eventImageContainer">
+      <img src="../static/images/Logo Party 4 The planet.png" alt="" />
+    </div>
+    <div class="eventDetailsContainer">
+      <div class="eventName">
+        <h2>Clean Walk</h2>
+      </div>
+      <div class="eventInformations">
+        <p class="eventStartTime">
+          Start Date: Sept. 25, 2023, 1 p.m.<!-- Event Start time-->
+        </p>
+        <p class="eventEndTime">
+          End Date: Sept. 25, 2023, 6 p.m.<!-- Event End time-->
+        </p>
+        <p class="eventParticipantsCounter">
+          203<i class="fa-solid fa-people-group"></i
+          ><!-- Event participants-->
+        </p>
+        <p class="eventLocation">Location:Sandymount<!-- Event location--></p>
+        <p class="eventOrganiser">
+          Organised by: Event organiser<!-- Event Organiser-->
+        </p>
+        <p class="eventDescription">
+          Description: Event description<!-- Event Description-->
+        </p>
+      </div>
+    </div>
+    <div class="eventButtonsContainer">
+      <button class="joinButton"><p>Join</p></button>
+      <button class="shareButton"><p>Share</p></button>
+    </div>
   </div>
 </div>
 

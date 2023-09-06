@@ -33,14 +33,17 @@
     <h2 class="eventsSubtitle">Events</h2>
   </div>
   <button class="filterButton">
-    <a href=""><i class="fa-solid fa-sliders"></i></a>
+    <a href="{% url 'events' %}?category=Seminar">Seminar<i class="fa-solid fa-sliders"></i></a>
+  </button>
+  <button class="filterButton">
+    <a href="{% url 'events' %}?category=Clean-up">Clean-up<i class="fa-solid fa-sliders"></i></a>
   </button>
 </div>
 <div class="eventsContainer">
   <div class="leftSide">
-    {% if all_events %}
+    {% if events %}
     <ul>
-      {% for event in all_events %}
+      {% for event in events %}
       <div class="eventContainer">
         <div class="eventNameBackground">
           <li class="eventName">

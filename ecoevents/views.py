@@ -7,8 +7,13 @@ def home(request):
 
 
 def events(request):
-    all_events = Ecoevent.objects.all
-    context = {'all_events': all_events}
+    all_events = Ecoevent.objects.all()
+    category = request.GET.get('category')
+    if category:
+        events = all_events.filter(category=category)
+    else:
+        events = all_events
+    context = {'events': events}
     return render(request, 'events.html', context)
 
 

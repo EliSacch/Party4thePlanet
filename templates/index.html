@@ -4,7 +4,17 @@
     This is the home page of the website.
 -->
 
-{% block content %}
+{% block header %}
+<nav>
+  <ul>
+    <li>Home</li>
+    <li>Home</li>
+    <li>Home</li>
+    <li>Home</li>
+    <li>Home</li>
+  </ul>
+</nav>
+{% endblock header %} {% block content %}
 <div class="heroLandingPage">
   <h1 class="mainTitle">Party 4 the Planet</h1>
   <div class="sentenceContainer">
@@ -19,7 +29,7 @@
   />
 </div>
 <button class="transitionButton">
-  <i class="fa-solid fa-arrow-down-long"></i>
+  <a href="{% url 'events' %}"><i class="fa-solid fa-arrow-down-long"></i></a>
 </button>
 
 {%endblock%}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik:ital@0;1&display=swap");
 
 body {
   margin: 0;
@@ -9,7 +9,7 @@ body {
   --main-color: #f8fff8;
   --secondary-color: #68edcb;
   --accent-color: #62f079;
-  font-family: "Bungee", cursive;
+  font-family: "Bungee Shade ", cursive;
   font-family: "Rubik", sans-serif;
   background: var(--main-color);
 }
@@ -30,7 +30,7 @@ a {
   min-height: 80vh;
 }
 .mainTitle {
-  font-family: "Bungee";
+  font-family: "Bungee Shade";
   color: var(--secondary-color);
   text-align: center;
   font-size: 9em;
@@ -100,7 +100,7 @@ a {
 .eventsTitle {
   font-size: 4rem;
   line-height: 40px;
-  font-family: "Bungee";
+  font-family: "Bungee Shade";
   color: var(--secondary-color);
   grid-area: ti;
   margin: 70px auto;
@@ -119,13 +119,14 @@ a {
 .switchPages {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 50px;
   grid-area: sw;
   border: 5px solid var(--secondary-color);
   border-radius: 40px;
   align-items: center;
-  font-family: "Bungee";
+  font-family: "Rubik";
   font-size: 1.3rem;
 }
 
@@ -135,6 +136,9 @@ a {
   height: 100%;
   background: var(--main-color);
   border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .incomingSwitchContainer a {
   color: var(--secondary-color);
@@ -146,6 +150,9 @@ a {
   background: var(--secondary-color);
   border-radius: 40px;
   color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mapSwitchContainer a {
   color: var(--main-color);
@@ -165,10 +172,10 @@ a {
   text-align: center;
 }
 .eventsFiltersContainer h2 {
-  font-family: "Bungee";
+  font-family: "Bungee Shade";
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: -10px;
+  margin-top: -15px;
   color: var(--main-color);
   letter-spacing: 5px;
 }
@@ -192,6 +199,7 @@ a {
 }
 .leftSide {
   width: 40%;
+  font-family: "Rubik";
 }
 .leftSide ul {
   margin: 0;
@@ -208,6 +216,7 @@ a {
   border-radius: 40px;
   width: 80%;
   margin: 0 auto;
+  border: 5px double var(--secondary-color);
 }
 .eventName {
   list-style-type: none;
@@ -216,19 +225,43 @@ a {
 }
 .eventName a {
   color: var(--main-color);
-  font-family: "Bungee";
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
+  padding: 10px;
 }
 .eventDetails {
   display: flex;
   justify-content: space-between;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 .rightSide {
   width: 60%;
 }
-
+.mapElementContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 50vh;
+}
+.leftMapSide {
+  width: 22%;
+}
+.categoriesNameContainer {
+  background-color: var(--accent-color);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 20px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.rightMapSide {
+  width: 70%;
+  background-color: var(--accent-color);
+}
 @media screen and (max-width: 1000px) {
   /* LANDING PAGE RESPONSIVE */
   .heroLandingPage {

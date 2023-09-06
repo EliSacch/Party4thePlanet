@@ -12,7 +12,7 @@
 {% if all_events %}
     <ul>
     {% for event in all_events %}
-        <li>{{ event }}</li>
+        <li><a href="{% url 'event' event.id %}">{{ event }}</a></li>
     {% endfor %}
     </ul>
 {% endif %}

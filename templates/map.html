@@ -7,7 +7,43 @@
 {% block content %}
 
 <!-- Edit this section -->
-<h1>Map</h1>
-<p>Map goes here</p>
+<div class="headerContainer">
+  <img
+    class="logoHeader"
+    src="../static/images/Logo Party 4 The planet.png"
+    alt="Logo Party for the Planet"
+  />
+  <h1 class="eventsTitle">Party for the planet</h1>
+  <div class="profileContainer">
+    <a href=""><i class="fa-solid fa-seedling"></i></a>
+    <p>My profile</p>
+  </div>
+  <div class="switchPages">
+    <div class="mapSwitchContainer">
+      <a href="{% url 'events' %}">Incoming</a>
+    </div>
+    <div class="incomingSwitchContainer">
+      <a href="{% url 'map' %}">Map</a>
+    </div>
+  </div>
+</div>
 
+<div class="mapElementContainer">
+  <div class="leftMapSide">
+    <!-- For All Categories , create a card like the next one. -->
+    <div class="categoriesNameContainer">
+      <h2>Clean walk</h2>
+      <!--This is the categories name variable-->
+    </div>
+    <div class="categoriesNameContainer">
+      <h2>Initiation to beekeeping</h2>
+      <!--This is the categories name variable-->
+    </div>
+    <div class="categoriesNameContainer">
+      <h2>Eco-market</h2>
+      <!--This is the categories name variable-->
+    </div>
+  </div>
+  <div class="rightMapSide"></div>
+</div>
 {%endblock%}

@@ -223,12 +223,36 @@ a {
 .eventDetails {
   display: flex;
   justify-content: space-between;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 .rightSide {
   width: 60%;
 }
-
+.mapElementContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 50vh;
+}
+.leftMapSide {
+  width: 22%;
+}
+.categoriesNameContainer {
+  background-color: var(--accent-color);
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-family: "Bungee";
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 20px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.rightMapSide {
+  width: 70%;
+  background-color: var(--accent-color);
+}
 @media screen and (max-width: 1000px) {
   /* LANDING PAGE RESPONSIVE */
   .heroLandingPage {

@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 if os.path.isfile('env.py'):
-     import env
+     import env  # noqa E402
 
 development = os.environ.get('DEV', False)
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -88,14 +89,14 @@ WSGI_APPLICATION = 'p4p.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 if 'DEV' in os.environ:
-     DATABASES = {
+    DATABASES = {
          'default': {
              'ENGINE': 'django.db.backends.sqlite3',
              'NAME': BASE_DIR / 'db.sqlite3',
          }
      }
 else:
-     DATABASES = {
+    DATABASES = {
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
      }
 

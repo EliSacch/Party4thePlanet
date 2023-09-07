@@ -133,11 +133,11 @@ a {
 }
 
 .incomingSwitchContainer {
-  width: 50%;
+  width: 33%;
   text-align: center;
   height: 100%;
   background: var(--main-color);
-  border-radius: 40px;
+  border-radius: 22px 0 22px 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,11 +146,11 @@ a {
   color: var(--secondary-color);
 }
 .mapSwitchContainer {
-  width: 50%;
+  width: 34%;
   text-align: center;
   height: 100%;
   background: var(--secondary-color);
-  border-radius: 40px;
+  border-radius: 0 0 8px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;
@@ -159,7 +159,20 @@ a {
 .mapSwitchContainer a {
   color: var(--main-color);
 }
-
+.createSwitchContainer {
+  width: 33%;
+  text-align: center;
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 0 22px 22px 8px;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createSwitchContainer a {
+  color: var(--main-color);
+}
 .eventsFiltersContainer {
   display: flex;
   justify-content: space-between;
@@ -214,8 +227,6 @@ a {
   border-radius: 40px;
   list-style-type: none;
 }
-.eventNameBackground {
-}
 .eventName {
   background-color: var(--accent-color);
   border-radius: 40px;
@@ -242,12 +253,9 @@ a {
   align-items: center;
   flex-direction: column;
   width: 55%;
-  height: ;
   border: 5px solid var(--secondary-color);
   border-radius: 40px;
   margin-top: 30px;
-}
-.eventImageContainer {
 }
 .eventImageContainer img {
   height: 200px;
@@ -313,6 +321,7 @@ a {
   height: 50px;
   font-size: 1.5rem;
 }
+
 /* MAP  */
 .mapElementContainer {
   display: flex;
@@ -339,6 +348,25 @@ a {
   width: 70%;
   background-color: var(--accent-color);
 }
+
+/* CREATE */
+
+.createTitle {
+  font-family: "Bungee Shade";
+  text-align: center;
+  color: var(--secondary-color);
+}
+.createEventForm {
+  margin: 0 auto;
+  background-color: var(--accent-color);
+  width: 50%;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 30% 10% 10% 10% 20% 10%;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 22px;
+}
+
 @media screen and (max-width: 1000px) {
   /* LANDING PAGE RESPONSIVE */
   .heroLandingPage {

@@ -210,11 +210,8 @@ a {
   padding: 10px;
   border: 2px solid var(--secondary-color);
   border-radius: 40px;
-<<<<<<< HEAD
   cursor: pointer;
-=======
   list-style-type: none;
->>>>>>> f9601d3f060d7fb81a6497e760da408133f75066
 }
 .eventNameBackground {
 }
@@ -331,6 +328,10 @@ a {
   width: 70%;
   background-color: var(--accent-color);
 }
+
+.hidden {
+  display:none;
+}
 @media screen and (max-width: 1000px) {
   /* LANDING PAGE RESPONSIVE */
   .heroLandingPage {
@@ -350,6 +351,7 @@ a {
     margin-bottom: 50px;
   }
 }
+
 @media screen and (max-width: 670px) {
   .mainTitle {
     font-size: 5em;

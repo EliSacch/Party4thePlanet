@@ -10,7 +10,7 @@
 <div class="headerContainer">
   <img
     class="logoHeader"
-    src="../static/images/Logo Party 4 The planet.png"
+    src="../static/images/Logo Party 4 The planet v2.png"
     alt="Logo Party for the Planet"
   />
   <h1 class="eventsTitle">Party for the planet</h1>
@@ -33,15 +33,17 @@
     <h2 class="eventsSubtitle">Events</h2>
   </div>
   <button class="filterButton">
-    <a href=""><i class="fa-solid fa-sliders"></i></a>
+    <a href="{% url 'events' %}?category=Seminar">Seminar<i class="fa-solid fa-sliders"></i></a>
+  </button>
+  <button class="filterButton">
+    <a href="{% url 'events' %}?category=Clean-up">Clean-up<i class="fa-solid fa-sliders"></i></a>
   </button>
 </div>
 <div class="eventsContainer">
   <div class="leftSide">
-    {% if all_events %}
+    {% if events %}
     <ul>
       {% for event in all_events %}
-
       <div class="eventContainer eventCard" data-id="{{ event.id }}">
         <div class="eventNameBackground">
           <li class="eventName">
@@ -52,7 +54,7 @@
           <p class="eventStart">Start date : {{event.start_datetime}}</p>
           <p class="eventLocation">Location : {{event.location}}</p>
         </div>
-      </div>
+      </li>
       {% endfor %}
     </ul>
 
@@ -75,6 +77,38 @@
     -->
 
     <!-- Ideas for what the code should like  -->
+     <!-- Ideas for what the code should like  -->
+     <div class="eventImageContainer">
+      <img src="../static/images/Logo Party 4 The planet.png" alt="" />
+    </div>
+    <div class="eventDetailsContainer">
+      <div class="eventName">
+        <h2>Clean Walk</h2>
+      </div>
+      <div class="eventInformations">
+        <p class="eventStartTime">
+          Start Date: Sept. 25, 2023, 1 p.m.<!-- Event Start time-->
+        </p>
+        <p class="eventEndTime">
+          End Date: Sept. 25, 2023, 6 p.m.<!-- Event End time-->
+        </p>
+        <p class="eventParticipantsCounter">
+          203<i class="fa-solid fa-people-group"></i
+          ><!-- Event participants-->
+        </p>
+        <p class="eventLocation">Location:Sandymount<!-- Event location--></p>
+        <p class="eventOrganiser">
+          Organised by: Event organiser<!-- Event Organiser-->
+        </p>
+        <p class="eventDescription">
+          Description: Event description<!-- Event Description-->
+        </p>
+      </div>
+    </div>
+    <div class="eventButtonsContainer">
+      <button class="joinButton"><p>Join</p></button>
+      <button class="shareButton"><p>Share</p></button>
+    </div>
   </div>
 </div>
 {% endif %}

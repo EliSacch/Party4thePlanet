@@ -8,10 +8,14 @@
 
 <!-- Edit this section -->
 <div class="headerContainer">
-  <img class="logoHeader" src="../static/images/Logo Party 4 The planet v2.png" alt="Logo Party for the Planet" />
+  <img
+    class="logoHeader"
+    src="../static/images/Logo Party 4 The planet v2.png"
+    alt="Logo Party for the Planet"
+  />
   <h1 class="eventsTitle">Party for the planet</h1>
   <div class="profileContainer">
-    <a href=""><i class="fa-solid fa-seedling"></i></a>
+    <a href="{% url 'profile' %}"><i class="fa-solid fa-seedling"></i></a>
     <p>My profile</p>
   </div>
   <div class="switchPages">
@@ -46,32 +50,25 @@
   <div class="leftSide">
     {% if events %}
     <form method="post" action="{% url 'events' %}">
-      {% csrf_token %}
-      {% for event in events %}
+      {% csrf_token %} {% for event in events %}
       <div class="eventContainer eventCard" data-id="{{ event.id }}">
         <div class="eventNameBackground">
-          <li class="eventName">
-            {{ event }}
-          </li>
+          <li class="eventName">{{ event }}</li>
         </div>
         <div class="eventDetails">
           <p class="eventStart">Start date : {{event.start_datetime}}</p>
           <p class="eventLocation">Location : {{event.location}}</p>
         </div>
-      </li>
+      </div>
       {% endfor %}
     </form>
   </div>
-
 
   <div class="rightSide">
     <div id="placeholder-image">
       <img src="../static/images/Logo Party 4 The planet.png" alt="" />
     </div>
-    <div id="result">
-    </div>
+    <div id="result"></div>
   </div>
 </div>
-{% endif %}
-
-{%endblock%}
+{% endif %} {%endblock%}

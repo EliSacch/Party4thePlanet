@@ -19,15 +19,17 @@
     <p>My profile</p>
   </div>
   <div class="switchPages">
-    <div class="mapSwitchContainer">
+    <div class="incomingSwitchContainer">
       <a href="{% url 'events' %}">Incoming</a>
     </div>
-    <div class="incomingSwitchContainer">
+    <div class="mapSwitchContainer">
       <a href="{% url 'map' %}">Map</a>
+    </div>
+    <div class="createSwitchContainer">
+      <a href="{% url 'create_event' %}">Create</a>
     </div>
   </div>
 </div>
-
 <div class="mapElementContainer">
   <div class="leftMapSide">
     <!-- For All Categories , create a card like the next one. -->

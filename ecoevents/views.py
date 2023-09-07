@@ -18,22 +18,20 @@ def events(request):
         events = all_events.filter(category=category)
     else:
         events = all_events
-<<<<<<< HEAD
     context = {"events": events}
-    return render(request, "events.html", context)
-=======
-    context = {'events': events}
 
-    if request.method == 'POST':
+    if request.method == "POST":
         id = int(request.POST.get("id", ""))
         if id is not None:
             get_event = Ecoevent.objects.filter(id=id)
-            selected_event = serializers.serialize('json', get_event,)
+            selected_event = serializers.serialize(
+                "json",
+                get_event,
+            )
 
-        return JsonResponse({'selected_event': selected_event})
+        return JsonResponse({"selected_event": selected_event})
 
-    return render(request, 'events.html', context)
->>>>>>> 72459bb85030f25ce8cb87a713a6ea6360a81c6f
+    return render(request, "events.html", context)
 
 
 def event(request, event_id):

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik:ital@0;1&display=swap");
 
 body {
   margin: 0;
@@ -6,10 +6,10 @@ body {
   list-style-type: none;
   box-sizing: border-box;
   height: 100vh;
-  --main-color: #f8fff8;
-  --secondary-color: #68edcb;
-  --accent-color: #62f079;
-  font-family: "Bungee", cursive;
+  --main-color: #e7fefe;
+  --secondary-color: #106751;
+  --accent-color: #00a97c;
+  font-family: "Bungee Shade ", cursive;
   font-family: "Rubik", sans-serif;
   background: var(--main-color);
 }
@@ -30,7 +30,7 @@ a {
   min-height: 80vh;
 }
 .mainTitle {
-  font-family: "Bungee";
+  font-family: "Bungee Shade";
   color: var(--secondary-color);
   text-align: center;
   font-size: 9em;
@@ -92,18 +92,19 @@ a {
     "lo sw pro";
 }
 .logoHeader {
-  height: 300px;
+  width: 100%;
   border-radius: 50%;
   grid-area: lo;
   margin: 20px auto;
 }
 .eventsTitle {
   font-size: 4rem;
-  line-height: 40px;
-  font-family: "Bungee";
+  line-height: 70px;
+  font-family: "Bungee Shade";
   color: var(--secondary-color);
   grid-area: ti;
-  margin: 70px auto;
+  /* margin: 70px auto; */
+  margin-left: 5%;
 }
 .profileContainer {
   margin: 20px auto;
@@ -119,43 +120,64 @@ a {
 .switchPages {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 50px;
   grid-area: sw;
   border: 5px solid var(--secondary-color);
   border-radius: 40px;
   align-items: center;
-  font-family: "Bungee";
+  font-family: "Rubik";
   font-size: 1.3rem;
+  margin-top: 50px;
 }
 
 .incomingSwitchContainer {
-  width: 50%;
+  width: 33%;
   text-align: center;
   height: 100%;
   background: var(--main-color);
-  border-radius: 40px;
+  border-radius: 22px 0 22px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .incomingSwitchContainer a {
   color: var(--secondary-color);
 }
 .mapSwitchContainer {
-  width: 50%;
+  width: 34%;
   text-align: center;
   height: 100%;
   background: var(--secondary-color);
-  border-radius: 40px;
+  border-radius: 0 0 8px 8px;
   color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mapSwitchContainer a {
   color: var(--main-color);
 }
-
+.createSwitchContainer {
+  width: 33%;
+  text-align: center;
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 0 22px 22px 8px;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createSwitchContainer a {
+  color: var(--main-color);
+}
 .eventsFiltersContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 80px;
+  margin: 0 20px;
 }
 .eventsSubtitleBackground {
   background-color: var(--secondary-color);
@@ -165,10 +187,10 @@ a {
   text-align: center;
 }
 .eventsFiltersContainer h2 {
-  font-family: "Bungee";
+  font-family: "Bungee Shade";
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: -10px;
+  margin-top: -15px;
   color: var(--main-color);
   letter-spacing: 5px;
 }
@@ -187,11 +209,12 @@ a {
 }
 .eventsContainer {
   display: flex;
-  justify-content: center;
-  margin: 0 80px;
+  justify-content: space-around;
+  margin: 0 20px;
 }
 .leftSide {
-  width: 40%;
+  width: 35%;
+  font-family: "Rubik";
 }
 .leftSide ul {
   margin: 0;
@@ -202,31 +225,147 @@ a {
   padding: 10px;
   border: 2px solid var(--secondary-color);
   border-radius: 40px;
+  cursor: pointer;
+  list-style-type: none;
 }
-.eventNameBackground {
+.eventName {
   background-color: var(--accent-color);
   border-radius: 40px;
   width: 80%;
   margin: 0 auto;
-}
-.eventName {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
+  border: 5px double var(--secondary-color);
+  color: var(--main-color);
+  text-align: center;
+  font-size: 20px;
+  padding: 0 10px;
 }
 .eventName a {
   color: var(--main-color);
-  font-family: "Bungee";
   text-align: center;
-  font-size: 1.3rem;
 }
 .eventDetails {
   display: flex;
   justify-content: space-between;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 .rightSide {
-  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+  border: 5px solid var(--secondary-color);
+  border-radius: 40px;
+  margin-top: 30px;
+}
+.eventImageContainer img {
+  height: 200px;
+}
+.eventDetailsContainer {
+  width: 100%;
+}
+.eventInformations {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas:
+    "st st pa pa en en"
+    "lo lo pa pa eo eo"
+    "des des des des des des ";
+  text-align: center;
+  padding: 5px;
+}
+.eventInformations p {
+  margin-bottom: 10px;
+}
+.eventStartTime {
+  grid-area: st;
+  text-align: left;
+}
+.eventEndTime {
+  grid-area: en;
+  text-align: left;
+}
+.eventParticipantsCounter {
+  grid-area: pa;
+  text-align: center;
+}
+.eventLocation {
+  grid-area: lo;
+  text-align: left;
+}
+.eventOrganiser {
+  grid-area: eo;
+  text-align: left;
+}
+.eventDescription {
+  grid-area: des;
+}
+
+.eventButtonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.eventButtonsContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bungee Shade";
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  border-radius: 22px;
+  width: 25%;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+/* MAP  */
+.mapElementContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 50vh;
+}
+.leftMapSide {
+  width: 22%;
+}
+.categoriesNameContainer {
+  background-color: var(--accent-color);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 20px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.rightMapSide {
+  width: 70%;
+  background-color: var(--accent-color);
+}
+
+/* CREATE */
+
+.createTitle {
+  font-family: "Bungee Shade";
+  text-align: center;
+  color: var(--secondary-color);
+}
+.createEventForm {
+  margin: 0 auto;
+  background-color: var(--accent-color);
+  width: 50%;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 30% 10% 10% 10% 20% 10%;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 22px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -248,6 +387,11 @@ a {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-width: 850px) {
+  .eventsTitle {
+    font-size: 3rem;
+  }
+}
 @media screen and (max-width: 670px) {
   .mainTitle {
     font-size: 5em;
@@ -256,5 +400,27 @@ a {
   .welcomeSentence {
     font-size: 1.4rem;
     margin-bottom: 0px;
+  }
+  .eventsContainer {
+    display: block;
+  }
+  .eventsFiltersContainer h2 {
+    font-size: 1.3rem;
+    margin-top: 9px;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .rightSide {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .eventsTitle {
+    margin-bottom: 120px;
+  }
+  .eventsFiltersContainer h2 {
+    font-size: 1rem;
+    margin-top: 15px;
   }
 }

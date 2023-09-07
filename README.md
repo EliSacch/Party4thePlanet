@@ -37,7 +37,7 @@ In pursuit of our project objectives we used the following technology
   - JavaScript and JQuery
   - Django
   - PostgreSQL
-  
+
 ## Credits
 We would like to give credit to the following individuals, organizations, and resources that have contributed to the project or provided inspiration:
 - 🌐 [External Resource 1]

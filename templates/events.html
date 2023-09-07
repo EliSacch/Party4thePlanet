@@ -10,12 +10,12 @@
 <div class="headerContainer">
   <img
     class="logoHeader"
-    src="../static/images/Logo Party 4 The planet.png"
+    src="../static/images/Logo Party 4 The planet v2.png"
     alt="Logo Party for the Planet"
   />
   <h1 class="eventsTitle">Party for the planet</h1>
   <div class="profileContainer">
-    <a href=""><i class="fa-solid fa-seedling"></i></a>
+    <a href="{% url 'profile' %}"><i class="fa-solid fa-seedling"></i></a>
     <p>My profile</p>
   </div>
   <div class="switchPages">
@@ -25,6 +25,9 @@
     <div class="mapSwitchContainer">
       <a href="{% url 'map' %}">Map</a>
     </div>
+    <div class="createSwitchContainer">
+      <a href="{% url 'create_event' %}">Create</a>
+    </div>
   </div>
 </div>
 
@@ -33,19 +36,24 @@
     <h2 class="eventsSubtitle">Events</h2>
   </div>
   <button class="filterButton">
-    <a href=""><i class="fa-solid fa-sliders"></i></a>
+    <a href="{% url 'events' %}?category=Seminar"
+      >Seminar<i class="fa-solid fa-sliders"></i
+    ></a>
+  </button>
+  <button class="filterButton">
+    <a href="{% url 'events' %}?category=Clean-up"
+      >Clean-up<i class="fa-solid fa-sliders"></i
+    ></a>
   </button>
 </div>
 <div class="eventsContainer">
   <div class="leftSide">
-    {% if all_events %}
-    <ul>
-      {% for event in all_events %}
-      <div class="eventContainer">
+    {% if events %}
+    <form method="post" action="{% url 'events' %}">
+      {% csrf_token %} {% for event in events %}
+      <div class="eventContainer eventCard" data-id="{{ event.id }}">
         <div class="eventNameBackground">
-          <li class="eventName">
-            <a href="{% url 'event' event.id %}">{{ event }}</a>
-          </li>
+          <li class="eventName">{{ event }}</li>
         </div>
         <div class="eventDetails">
           <p class="eventStart">Start date : {{event.start_datetime}}</p>
@@ -53,13 +61,14 @@
         </div>
       </div>
       {% endfor %}
-    </ul>
-    {% endif %}
+    </form>
   </div>
+
   <div class="rightSide">
-    <!-- Display a more detailled version of the card , more details  -->
-    <h1>Future Card</h1>
+    <div id="placeholder-image">
+      <img src="../static/images/Logo Party 4 The planet.png" alt="" />
+    </div>
+    <div id="result"></div>
   </div>
 </div>
-
-{%endblock%}
+{% endif %} {%endblock%}

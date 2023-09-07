@@ -92,18 +92,19 @@ a {
     "lo sw pro";
 }
 .logoHeader {
-  height: 300px;
+  width: 100%;
   border-radius: 50%;
   grid-area: lo;
   margin: 20px auto;
 }
 .eventsTitle {
   font-size: 4rem;
-  line-height: 40px;
+  line-height: 70px;
   font-family: "Bungee Shade";
   color: var(--secondary-color);
   grid-area: ti;
-  margin: 70px auto;
+  /* margin: 70px auto; */
+  margin-left: 5%;
 }
 .profileContainer {
   margin: 20px auto;
@@ -128,6 +129,7 @@ a {
   align-items: center;
   font-family: "Rubik";
   font-size: 1.3rem;
+  margin-top: 50px;
 }
 
 .incomingSwitchContainer {
@@ -162,7 +164,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 80px;
+  margin: 0 20px;
 }
 .eventsSubtitleBackground {
   background-color: var(--secondary-color);
@@ -195,7 +197,7 @@ a {
 .eventsContainer {
   display: flex;
   justify-content: space-around;
-  margin: 0 80px;
+  margin: 0 20px;
 }
 .leftSide {
   width: 35%;
@@ -240,8 +242,10 @@ a {
   align-items: center;
   flex-direction: column;
   width: 55%;
+  height: ;
   border: 5px solid var(--secondary-color);
   border-radius: 40px;
+  margin-top: 30px;
 }
 .eventImageContainer {
 }
@@ -255,28 +259,36 @@ a {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 22% 22% 56%;
+  grid-template-rows: 33% 33% 33%;
   grid-template-areas:
     "st st pa pa en en"
-    "lo lo lo eo eo eo"
+    "lo lo pa pa eo eo"
     "des des des des des des ";
   text-align: center;
   padding: 5px;
 }
+.eventInformations p {
+  margin-bottom: 10px;
+}
 .eventStartTime {
   grid-area: st;
+  text-align: left;
 }
 .eventEndTime {
   grid-area: en;
+  text-align: left;
 }
 .eventParticipantsCounter {
   grid-area: pa;
+  text-align: center;
 }
 .eventLocation {
   grid-area: lo;
+  text-align: left;
 }
 .eventOrganiser {
   grid-area: eo;
+  text-align: left;
 }
 .eventDescription {
   grid-area: des;
@@ -346,6 +358,11 @@ a {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-width: 850px) {
+  .eventsTitle {
+    font-size: 3rem;
+  }
+}
 @media screen and (max-width: 670px) {
   .mainTitle {
     font-size: 5em;
@@ -354,5 +371,27 @@ a {
   .welcomeSentence {
     font-size: 1.4rem;
     margin-bottom: 0px;
+  }
+  .eventsContainer {
+    display: block;
+  }
+  .eventsFiltersContainer h2 {
+    font-size: 1.3rem;
+    margin-top: 9px;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .rightSide {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .eventsTitle {
+    margin-bottom: 120px;
+  }
+  .eventsFiltersContainer h2 {
+    font-size: 1rem;
+    margin-top: 15px;
   }
 }

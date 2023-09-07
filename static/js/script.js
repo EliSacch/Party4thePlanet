@@ -69,3 +69,8 @@ function display_event(id) {
         }
     })
 }
+
+// function to open Filter dropdown
+function filterMenuOpen() {
+    document.getElementById("filterDropdown").classList.toggle("show");
+}

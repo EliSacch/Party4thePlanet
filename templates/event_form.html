@@ -32,9 +32,27 @@
   action=""
   enctype="multipart/form-data"
 >
-  {% csrf_token %} {{ form.as_p }}
+  {% csrf_token %} 
+  <ul>
 
-  <button type="submit">Create Event</button>
+      <label for="organizer">Organizer:</label>
+      <p>{{ form.organizer }}</p>
+      <label for="title">Title:</label>
+      <p>{{ form.title }}</p>
+      <label for="description">Description:</label>
+      <p>{{ form.description }}</p>
+      <label for="category">Category:</label>
+      <p>{{ form.category }}</p>
+      <label for="start_datetime">Start Date:</label>
+      <p>{{ form.start_datetime }}</p>
+      <label for="end_datetime">End Date:</label>
+      <p>{{ form.end_datetime }}</p>
+      <label for="location">Location:</label>
+      <p>{{ form.location }}</p>
+      <button class="btn" type="submit">Create Event</button>
+</ul>
+ 
+
 
   {% endblock %} ```
 </form>

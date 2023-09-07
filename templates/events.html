@@ -8,11 +8,7 @@
 
 <!-- Edit this section -->
 <div class="headerContainer">
-  <img
-    class="logoHeader"
-    src="../static/images/Logo Party 4 The planet v2.png"
-    alt="Logo Party for the Planet"
-  />
+  <img class="logoHeader" src="../static/images/Logo Party 4 The planet v2.png" alt="Logo Party for the Planet" />
   <h1 class="eventsTitle">Party for the planet</h1>
   <div class="profileContainer">
     <a href=""><i class="fa-solid fa-seedling"></i></a>
@@ -49,74 +45,33 @@
 <div class="eventsContainer">
   <div class="leftSide">
     {% if events %}
-    <ul>
+    <form method="post" action="{% url 'events' %}">
+      {% csrf_token %}
       {% for event in events %}
-      <div class="eventContainer">
+      <div class="eventContainer eventCard" data-id="{{ event.id }}">
         <div class="eventNameBackground">
-          <div class="eventName">
-            <a href="{% url 'event' event.id %}">{{ event }}</a>
-          </div>
+          <li class="eventName">
+            {{ event }}
+          </li>
         </div>
         <div class="eventDetails">
           <p class="eventStart">Start date : {{event.start_datetime}}</p>
           <p class="eventLocation">Location : {{event.location}}</p>
         </div>
-      </div>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </div>
-  <div class="rightSide">
-    <!-- Display a more detailled version of the card , more details  -->
-    <!-- Display a more detailled version of the card , more details  -->
-    <!-- {% for event in events_clicked %}
-      <li class="eventName">
-        <a href="{% url 'event' event.id %}">{{ event }}</a>
       </li>
-      <div class="eventDetails">
-        <p>{{ event.title}}</p>
-        <p>{{ event.description }}</p>
-        <p>{{ event.start_datetime }}</p>
-        <p>{{ event.end_datetime }}</p>
-        <p>{{ event.location }}</p>
-        <p>{{ event.organizer }}</p>
-        <p>{{ event.created_on }}</p>
-      </div>
-      {% endfor %} -->
+      {% endfor %}
+    </form>
+  </div>
 
-    <!-- Ideas for what the code should like  -->
-    <div class="eventImageContainer">
+
+  <div class="rightSide">
+    <div id="placeholder-image">
       <img src="../static/images/Logo Party 4 The planet.png" alt="" />
     </div>
-    <div class="eventDetailsContainer">
-      <div class="eventName">
-        <h2>Clean Walk</h2>
-      </div>
-      <div class="eventInformations">
-        <p class="eventStartTime">
-          Start Date: Sept. 25, 2023, 1 p.m.<!-- Event Start time-->
-        </p>
-        <p class="eventEndTime">
-          End Date: Sept. 25, 2023, 6 p.m.<!-- Event End time-->
-        </p>
-        <p class="eventParticipantsCounter">
-          203<i class="fa-solid fa-people-group"></i
-          ><!-- Event participants-->
-        </p>
-        <p class="eventLocation">Location:Sandymount<!-- Event location--></p>
-        <p class="eventOrganiser">
-          Organised by: Event organiser<!-- Event Organiser-->
-        </p>
-        <p class="eventDescription">
-          Description: Event description<!-- Event Description-->
-        </p>
-      </div>
-    </div>
-    <div class="eventButtonsContainer">
-      <button class="joinButton"><p>Join</p></button>
-      <button class="shareButton"><p>Share</p></button>
+    <div id="result">
     </div>
   </div>
 </div>
+{% endif %}
 
 {%endblock%}

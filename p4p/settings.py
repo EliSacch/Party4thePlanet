@@ -33,11 +33,7 @@ SECRET_KEY = 'django-insecure-d9j$7dww^e4z1v@dy_uw$v6msajh@_3bci_gk$astu-^b$)qgy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-     'p4tp-7e492ba8bb6b.herokuapp.com',
-     'localhost',
-     '127.0.0.1',
-     ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -50,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ecoevents',
-
+    
 ]
 
 MIDDLEWARE = [
@@ -87,17 +83,12 @@ WSGI_APPLICATION = 'p4p.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'DEV' in os.environ:
-     DATABASES = {
-         'default': {
-             'ENGINE': 'django.db.backends.sqlite3',
-             'NAME': BASE_DIR / 'db.sqlite3',
-         }
-     }
-else:
-     DATABASES = {
-         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-     }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation

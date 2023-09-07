@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from .models import Ecoevent
 from .forms import EcoeventForm
 from django.contrib import messages
+import json
+from django.core import serializers
+from django.http import JsonResponse
 
 
 def home(request):
@@ -15,8 +18,22 @@ def events(request):
         events = all_events.filter(category=category)
     else:
         events = all_events
+<<<<<<< HEAD
     context = {"events": events}
     return render(request, "events.html", context)
+=======
+    context = {'events': events}
+
+    if request.method == 'POST':
+        id = int(request.POST.get("id", ""))
+        if id is not None:
+            get_event = Ecoevent.objects.filter(id=id)
+            selected_event = serializers.serialize('json', get_event,)
+
+        return JsonResponse({'selected_event': selected_event})
+
+    return render(request, 'events.html', context)
+>>>>>>> 72459bb85030f25ce8cb87a713a6ea6360a81c6f
 
 
 def event(request, event_id):

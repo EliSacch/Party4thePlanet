@@ -225,6 +225,7 @@ a {
   padding: 10px;
   border: 2px solid var(--secondary-color);
   border-radius: 40px;
+  cursor: pointer;
   list-style-type: none;
 }
 .eventName {

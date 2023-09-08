@@ -133,6 +133,12 @@ a {
   /* margin: 70px auto; */
   margin-left: 5%;
 }
+.event-category-heading {
+  color: #00a97c;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+}
 .profileContainer {
   margin: 20px auto;
   text-align: center;
@@ -240,7 +246,6 @@ a {
 * { box-sizing: border-box; }
 
 .filtermenu {
-  /* margin: auto; */
   width: 50%;
 }  
 .dropbtn {
@@ -251,20 +256,26 @@ a {
   border: none;
   cursor: pointer;
   font-family: "Rubik", sans-serif;
-  border-radius: 30px;
   padding:20px;
   width: 100%;
+  border-radius: 30px;
 }
 
+.dropbtnborder {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#filterDropdown {
+  display: none;
+}
 .dropdown-content {
   display: none;
   position: absolute;
   overflow: hidden;
-  width: 48%;
   list-style-type: none;
   margin-top: 0;
-  padding-left: 0;
-  border-radius: 30px;
+  padding-left: 0; 
+  width: 50%;
 }
 .dropdown-content a {
   color: #e7fefe;
@@ -273,9 +284,14 @@ a {
   display: block;
   background-color: #00a97c;
   text-align: center;
+  margin-right: 20px;
 }
 #menutop {
   padding-top: 10px;
+}
+#filterDropdown:last-child {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .dropdown-content a:hover {background-color: var(--secondary-color)}
 
@@ -330,7 +346,7 @@ a {
   padding: 0;
 }
 .eventContainer {
-  margin-top: 30px;
+  margin-top: 15px;
   padding: 10px;
   border: 2px solid var(--secondary-color);
   border-radius: 40px;

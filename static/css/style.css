@@ -418,6 +418,7 @@ a {
   display: flex;
   justify-content: space-around;
   height: 50vh;
+  max-width: 90%;
 }
 .leftMapSide {
   width: 22%;
@@ -441,7 +442,9 @@ a {
 .rightMapSide {
   width: 70%;
   background-color: var(--accent-color);
+  margin: 0 auto;
   margin-bottom: 50px;
+  min-height: 415px;
 }
 
 
@@ -454,6 +457,7 @@ a {
   color: var(--main-color);
 }
 .createEventForm {
+
   margin: 0 auto;
   background-color: var(--accent-color);
   min-width: 300px;
@@ -461,7 +465,7 @@ a {
   padding: 20px;
   border-radius: 22px;
   color: var(--main-color);
-  margin-top: -50px;
+  margin:50px auto; 
 }
 /* Sign Up */
 .createEventForm :nth-child(2){
@@ -480,11 +484,12 @@ margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .createEventForm p{
   display: flex;
   flex-direction: column;
-  margin-bottom: -5px;
+  margin-bottom: 0px;
 }
 .createEventForm p input{
   min-width: 250px;
@@ -492,6 +497,7 @@ margin-bottom: 5px;
   border-radius: 22px;
   border: none;
   padding: 5px;
+  margin-bottom: -5px;
 }
 .createEventForm p label{
   margin-bottom: 10px;
@@ -694,6 +700,14 @@ border: none;
   }
   .mapElementContainer{
    flex-direction: column;
+   margin: 50px auto;
+  }
+  .leftMapSide{
+    width: 70%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
   }
 }
 @media screen and (max-width: 850px) {
@@ -739,6 +753,9 @@ border: none;
   }
   .profileContainer i{
     font-size: 3rem;
+  }
+  .categoriesNameContainer h2{
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 450px) {

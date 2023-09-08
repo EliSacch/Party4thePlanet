@@ -17,6 +17,7 @@
   <div class="filtermenu">
     <button id="dropBtn" onclick="filterMenuOpen()" class="dropbtn">Categories</button>
     <ul id="filterDropdown" class="dropdown-content">
+      <li><a id="menutop" href="{% url 'events' %}">All Events</a></li>
       <li><a id="menutop" href="{% url 'events' %}?category=Seminar">Seminar</a></li>
       <li><a href="{% url 'events' %}?category=Clean-up">Clean-up</a></li>
       <li> <a id="menubottom" href="#contact">More...</a></li>
@@ -30,7 +31,7 @@
     {% if category %}
       <h3 class="event-category-heading">{{category}}</h3>
     {% else %}
-      <h3>All Events</h3>
+      <h3 class="event-category-heading">All Events</h3>
     {% endif %}
     {% if events %}
     <form method="post" action="{% url 'events' %}">

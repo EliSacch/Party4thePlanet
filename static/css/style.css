@@ -47,8 +47,7 @@ a {
   height: 50%;
   max-height: 120px;
   margin: 0 auto;
-  padding: 0 20px;
-  padding-bottom: 20px;
+  padding: 0 10px;
   border-radius: 22px;
   border: 25px double var(--main-color);
   grid-area: ws;
@@ -58,7 +57,8 @@ a {
   font-family: "Rubik";
   font-style: italic;
   color: var(--main-color);
-  font-size: 2rem;
+  font-size: 1.3rem;
+  margin-top: 15px;
   margin-bottom: 100px;
 }
 .logo {
@@ -76,7 +76,6 @@ a {
   border: none;
   border-radius: 50%;
   background: var(--secondary-color);
-  padding: 20px;
   width: 100px;
   height: 100px;
   text-align: center;  /* New */
@@ -85,8 +84,7 @@ a {
 }
 .transitionButton:hover {
   width: 120px;
-  height: 120px;
-  padding: 15px; 
+  height: 120px; 
   border: 5px double var(--main-color);
 }
 .transitionButton:focus { 
@@ -763,6 +761,12 @@ textarea{
   }
 }
 @media screen and (max-width: 450px) {
+  .mainTitle{
+    font-size: 4rem;
+  }
+  .welcomeSentence{
+    font-size: 1rem;
+  }
   .eventsTitle {
     margin-bottom: 120px;
   }

@@ -20,12 +20,18 @@ def home(request):
 def events(request):
     now = datetime.datetime.now()
     all_events = Ecoevent.objects.all().filter(start_datetime__gte=now)
+    all_categories = []
+    for event in all_events:
+        all_categories.append(event.category)
     category = request.GET.get("category")
     if category:
         events = all_events.filter(category=category)
     else:
         events = all_events
-    context = {"events": events}
+    context = {
+        "events": events,
+        "all_categories": all_categories
+        }
 
     if request.method == "POST":
         id = int(request.POST.get("id", ""))
@@ -72,6 +78,12 @@ def map(request):
 
     events = []
     categories = []
+    all_categories = []
+    for event in all_events:
+        all_categories.append(event.category)
+    category = request.GET.get("category")
+    if category:
+        all_events = all_events.filter(category=category)
 
     for event in all_events:
         events.append({
@@ -79,10 +91,13 @@ def map(request):
             "coordinates": extract_coordinates(event.location)
         })
         categories.append(event.category)
+
+    
     
     context = {
         "events": json.dumps(events),
-        "categories": categories
+        "categories": categories,
+        'all_categories': all_categories,
     }
 
     return render(request, "map.html", context)

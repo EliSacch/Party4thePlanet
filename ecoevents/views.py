@@ -28,23 +28,16 @@ def events(request):
         events = all_events.filter(category=category)
     else:
         events = all_events
-<<<<<<< HEAD
     context = {"events": events,
-               "category": category
-    }
-=======
-    context = {
-        "events": events,
-        "all_categories": all_categories
+        "all_categories": all_categories,
+        "category": category
         }
->>>>>>> 76085120f50ab46979e277d5b03c51e4e4bcafd7
-
     if request.method == "POST":
         id = int(request.POST.get("id", ""))
         if id is not None:
             event = Ecoevent.objects.filter(id=id)
             organizer = event[0].organizer.username
-            
+
             selected_event = serializers.serialize(
                 "json",
                 event,

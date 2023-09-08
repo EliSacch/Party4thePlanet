@@ -16,17 +16,10 @@
   <div class="filtermenu">
     <button id="dropBtn" onclick="filterMenuOpen()" class="dropbtn">Filters<i class="fa-solid fa-sliders"></i></button>
     <ul id="filterDropdown" class="dropdown-content">
-<<<<<<< HEAD
-      <li><a id="menutop" href="{% url 'events' %}">All Events</a></li>
-      <li><a id="menutop" href="{% url 'events' %}?category=Seminar">Seminar</a></li>
-      <li><a href="{% url 'events' %}?category=Clean-up">Clean-up</a></li>
-      <li> <a id="menubottom" href="#contact">More...</a></li>
-=======
       <li><a id="menutop" href="{% url 'events' %}?">All</a></li>
       {% for category in all_categories %}
       <li><a href="{% url 'events' %}?category={{ category }}">{{ category }}</a></li>
       {% endfor %}
->>>>>>> 76085120f50ab46979e277d5b03c51e4e4bcafd7
     </ul>
   </div>
 

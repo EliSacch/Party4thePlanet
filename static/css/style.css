@@ -289,7 +289,7 @@ a {
 #menutop {
   padding-top: 10px;
 }
-#menubottom {
+#filterDropdown:last-child {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }

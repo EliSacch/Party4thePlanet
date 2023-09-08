@@ -25,7 +25,9 @@ def events(request):
         events = all_events.filter(category=category)
     else:
         events = all_events
-    context = {"events": events}
+    context = {"events": events,
+               "category": category
+    }
 
     if request.method == "POST":
         id = int(request.POST.get("id", ""))

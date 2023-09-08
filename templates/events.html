@@ -14,15 +14,6 @@
     <h2 class="eventsSubtitle">Events</h2>
   </div>
 
- <!--<a href="{% url 'events' %}?category=Seminar" class="filterButton"> Removed button and styled anchors as buttons
-    Seminar<i class="fa-solid fa-sliders"></i>
-  </a>
-  <a href="{% url 'events' %}?category=Clean-up" class="filterButton"> 
-    Clean-up<i class="fa-solid fa-sliders"></i>
-  </a>-->
-
-
-
   <div class="filtermenu">
     <button id="dropBtn" onclick="filterMenuOpen()" class="dropbtn">Categories</button>
     <ul id="filterDropdown" class="dropdown-content">
@@ -36,6 +27,11 @@
 
 <div class="eventsContainer">
   <div class="leftSide">
+    {% if category %}
+      <h3 class="event-category-heading">{{category}}</h3>
+    {% else %}
+      <h3>All Events</h3>
+    {% endif %}
     {% if events %}
     <form method="post" action="{% url 'events' %}">
       {% csrf_token %} {% for event in events %}

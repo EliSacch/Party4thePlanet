@@ -105,7 +105,10 @@ def map(request):
 
 
 def profile(request):
-    context = {}
+    my_events = Ecoevent.objects.filter(organizer=request.user)
+    context = {
+        "my_events": my_events,
+    }
     return render(request, "profile.html", context)
 
 
@@ -126,6 +129,19 @@ def createEvent(request):
     context = {"form": form}
     return render(request, "event_form.html", context)
 
+
+def deleteEvent(request, event_id):
+    event = Ecoevent.objects.get(pk=event_id)
+    if request.user == event.organizer:
+        if request.method == "POST":
+            event.delete()
+            messages.success(request, "Event deleted successfully!")
+            return redirect("profile")
+    else:
+        return redirect("events")
+    
+    context = {"event": event}
+    return render(request, "delete_event.html", context)
 
 def editUser(request, user_id):
     user = User.objects.get(pk=user_id)

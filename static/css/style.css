@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik:ital@0;1&display=swap");
+/* Added 9/8/2023 */
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -74,13 +78,33 @@ a {
   padding: 20px;
   width: 100px;
   height: 100px;
+  text-align: center;  /* New */
+  line-height: 30px;   /*  New helps in vertically centering icon. adjust if needed. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /*  New smooth transition for hover and focus effects */
 }
 .transitionButton:hover {
   width: 120px;
   height: 120px;
+  padding: 15px; 
   border: 5px double var(--main-color);
 }
-
+.transitionButton:focus { 
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* New */
+}
+.transitionButton:active {
+  transform: scale(0.95); /* New slight push effect */
+}
+.transitionButton .fa-solid {
+  font-size: 4rem;  /* This is to set the size of the icon */
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+.fa-solid, .fas {
+  font-weight: 900;
+  margin-left: 1rem;
+}
 /* EVENTS */
 
 .headerContainer {
@@ -243,14 +267,19 @@ a {
 }
 
 .filterButton {
-  border: none;
+  border: 2px outset rgb(15, 209, 112);
   background-color: var(--secondary-color);
   font-size: 2rem;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 20rem; /* updated from 60px */
+  height: 40px; /* updated from 60px*/
+  border-radius: 25px; /* updated from 50% */
   padding: 5px;
+  text-align: center;
 }
+.filterButton:hover {
+  text-decoration: none; /* Keeps the underline removed even on hover */
+}
+.fa-solid
 .filterButton a i {
   color: var(--main-color);
 }

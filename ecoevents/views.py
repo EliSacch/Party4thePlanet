@@ -1,10 +1,13 @@
+import os
+import requests
+
 from django.shortcuts import render, redirect
 from .models import Ecoevent
 from .forms import EcoeventForm
 from django.contrib import messages
-import json
 from django.core import serializers
 from django.http import JsonResponse
+from urllib.parse import urlencode
 
 
 def home(request):
@@ -39,6 +42,27 @@ def event(request, event_id):
 
 def map(request):
     context = {}
+    addr_ex = "Marina Market, Centre Park Rd, Cork, T12 YX76"
+
+    # Start code from CodingEntepreneurs https://www.youtube.com/watch?v=ckPEY2KppHc
+    def extract_coordinates(address, data_type = 'json'):
+        # Get url from address
+        endpoint = f"https://maps.googleapis.com/maps/api/geocode/{data_type}"
+        params = {"address": address, "key": os.environ.get('MAPS_API_KEY')}
+        url_params = urlencode(params)
+        url = f"{endpoint}?{url_params}"
+        # Get coordinates from url
+        r = requests.get(url)
+        if r.status_code not in range(200, 299):
+            return ()
+        latlng = {}
+        try:
+            latlng = r.json()['results'][0]['geometry']['location']
+        except:
+            pass
+        return latlng.get("lat"), latlng.get("lng")
+    # end of code from CodingEntepreneurs
+
     return render(request, 'map.html', context)
 
 

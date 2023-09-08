@@ -50,15 +50,15 @@
       {% for event in events %}
       <div class="eventContainer eventCard" data-id="{{ event.id }}">
         <div class="eventNameBackground">
-          <li class="eventName">
+          <div class="eventName">
             {{ event }}
-          </li>
+          </div>
         </div>
         <div class="eventDetails">
           <p class="eventStart">Start date : {{event.start_datetime}}</p>
           <p class="eventLocation">Location : {{event.location}}</p>
         </div>
-      </li>
+      </div>
       {% endfor %}
     </form>
   </div>

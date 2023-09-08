@@ -43,9 +43,9 @@
         <div class="eventNameBackground">
           <li class="eventName">{{ event }}</li>
         </div>
-        <div class="eventDetails">
-          <p class="eventStart">Start date : {{event.start_datetime}}</p>
-          <p class="eventLocation">Location : {{event.location}}</p>
+        <div class="eventDetails">  <!-- F = FullMonthName, d = DayOfTheMonth, Y = Four-digit year, H = Two-digit hour (24hr), i = Two-digit minute   -->                                
+          <p class="eventStart">Start date: {{ event.start_datetime|date:"F d, Y, H:i" }}</p>
+          <p class="eventLocation">Location: {{event.location}}</p>
         </div>
       </div>
       {% endfor %}

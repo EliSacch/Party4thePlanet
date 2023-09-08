@@ -490,7 +490,6 @@ margin-bottom: 5px;
   margin-bottom: 0px;
 }
 .createEventForm p input{
-  min-width: 250px;
   width: 100%;
   border-radius: 22px;
   border: none;

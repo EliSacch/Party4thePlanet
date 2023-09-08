@@ -24,11 +24,11 @@
 
 
   <div class="filtermenu">
-    <button onclick="filterMenuOpen()" class="dropbtn">Categories</button>
+    <button id="dropBtn" onclick="filterMenuOpen()" class="dropbtn">Categories</button>
     <ul id="filterDropdown" class="dropdown-content">
       <li><a id="menutop" href="{% url 'events' %}?category=Seminar">Seminar</a></li>
       <li><a href="{% url 'events' %}?category=Clean-up">Clean-up</a></li>
-      <li> <a href="#contact">More...</a></li>
+      <li> <a id="menubottom" href="#contact">More...</a></li>
     </ul>
   </div>
 

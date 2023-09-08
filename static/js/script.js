@@ -139,10 +139,13 @@ async function initMap(locations, titles) {
 // function to open Filter dropdown
 function filterMenuOpen() {
     var dropdown = document.getElementById("filterDropdown");
+    var button = document.getElementById("dropBtn");
     if (dropdown.style.display === "block") {
         dropdown.style.display = "none";
+        button.classList.remove("dropbtnborder");
     } else {
         dropdown.style.display = "block";
+        button.classList.add("dropbtnborder");
     }
 }
 
@@ -152,5 +155,6 @@ document.addEventListener("click", function(event) {
     var button = document.querySelector(".dropbtn");
     if (event.target !== button && event.target !== dropdown) {
         dropdown.style.display = "none";
+        button.classList.remove("dropbtnborder");
     }
 });

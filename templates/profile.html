@@ -1,22 +1,32 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
 
-<div class="headerContainer">
-  <img
-    class="logoHeader"
-    src="../static/images/Logo Party 4 The planet v2.png"
-    alt="Logo Party for the Planet"
-  />
-  <h1 class="eventsTitle">Party for the planet</h1>
-  <div class="switchPages">
-    <div class="incomingSwitchContainer">
-      <a href="{% url 'events' %}">Incoming</a>
-    </div>
-    <div class="mapSwitchContainer">
-      <a href="{% url 'map' %}">Map</a>
-    </div>
-    <div class="createSwitchContainer">
-      <a href="{% url 'create_event' %}">Create</a>
-    </div>
+{% load static %}
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<div class="createTitle">
+  <h2>{{request.user}}'s Profile</h2>
+</div>
+<div class="createEventForm">
+  <div>
+    <p>Logged in user: {{request.user}}</p>
+    <p>First Name: {{request.user.first_name}}</p>
+    <p>Last Name: {{request.user.last_name}}</p>
+    <p>E-Mail: {{request.user.email}}</p>
+    <p>Username: {{request.user.username}}</p>
+    <p>Last Login: {{request.user.last_login}}</p>
+    <p>Date Joined: {{request.user.date_joined}}</p>
+  </div>
+  <div>
+    <button>
+      <a href="{% url 'edit_user' user.id %}">Edit</a>
+    </button>
+    <button>
+      <a href="{% url 'delete_user' user.id %}">Delete</a>
+    </button>
   </div>
 </div>
+
 {%endblock%}

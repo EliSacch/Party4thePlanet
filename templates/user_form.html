@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+{% load static %}
+
+{% include 'header.html' %}
+
+<div class="createTitle">
+    <h2>Edit User</h2>
+</div>
+<div class="createEventForm">
+    <ul>
+        <form class="" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="first_name">First Name:</label>
+            <p>{{ form.first_name }}</p>
+            <label for="last_name">Last Name:</label>
+            <p>{{ form.last_name }}</p>
+            <label for="email">Email:</label>
+            <p>{{ form.email }}</p>
+           
+            <button class="" type="submit">Submit</button>
+        </form>
+    </ul>
+</div>
+
+{% endblock %}

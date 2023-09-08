@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<p>Are you sure you want to delete {{request.user}}'s Profile?</p>
+<form class="" method="post" action="">
+    {% csrf_token %}
+
+    <button type="" class="" href="javascript:history.go(-1)"> BACK </button>
+    <button type="submit" class="" value="">CONFIRM</button>
+</form>
+
+{% endblock %}

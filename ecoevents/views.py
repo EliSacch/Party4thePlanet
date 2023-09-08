@@ -46,13 +46,13 @@ def event(request, event_id):
 
 
 def map(request):
-    context = {}
-    addr_ex = "Marina Market, Centre Park Rd, Cork, T12 YX76"
+    
+    addr_ex = ["Marina Market, Centre Park Rd, Cork, T12 YX76"]
 
     # Start code from CodingEntepreneurs https://www.youtube.com/watch?v=ckPEY2KppHc
-    def extract_coordinates(address, data_type = 'json'):
+    def extract_coordinates(address):
         # Get url from address
-        endpoint = f"https://maps.googleapis.com/maps/api/geocode/{data_type}"
+        endpoint = f"https://maps.googleapis.com/maps/api/geocode/json"
         params = {"address": address, "key": os.environ.get('MAPS_API_KEY')}
         url_params = urlencode(params)
         url = f"{endpoint}?{url_params}"
@@ -67,6 +67,11 @@ def map(request):
             pass
         return latlng.get("lat"), latlng.get("lng")
     # end of code from CodingEntepreneurs
+
+    markers = map(extract_coordinates, addr_ex)
+    context = {
+        "markers": markers,
+    }
 
     return render(request, "map.html", context)
 

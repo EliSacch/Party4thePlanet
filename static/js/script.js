@@ -85,3 +85,19 @@ async function initMap() {
       zoom: 8,
     });
   }
+
+
+var map;
+async function initMap() {
+    const { Map } = await google.maps.importLibrary("maps");
+  
+    map = new Map(document.getElementById("map"), {
+      center: { lat: 53.44947, lng: -7.52297 },
+      zoom: 8,
+    });
+  }
+
+// function to open Filter dropdown
+function filterMenuOpen() {
+    document.getElementById("filterDropdown").classList.toggle("show");
+}

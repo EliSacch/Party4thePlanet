@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Ecoevent
+from .models import Ecoevent, User
 from django import forms
 
 
@@ -10,7 +10,6 @@ class EcoeventForm(ModelForm):
     class Meta:
         model = Ecoevent
         fields = [
-            'organizer',
             'title',
             'description',
             'category',
@@ -24,3 +23,12 @@ class EcoeventForm(ModelForm):
             'end_datetime': forms.DateTimeInput(attrs={
                 'type': 'datetime-local'}),
         }
+
+
+class UserForm(ModelForm):
+    """
+    Form for creating and editing Users
+    """
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email']

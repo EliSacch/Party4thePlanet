@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<div class="createEventForm">
+    <p>Are you sure you want to delete {{request.user}}'s Profile?</p>
+    <form class="" method="post" action="">
+        {% csrf_token %}
+
+        <a type="" role="button" class="" href="javascript:history.go(-1)"> BACK </a>
+        <button type="submit" class="" value="">CONFIRM</button>
+    </form>
+</div>
+
+{% endblock %}

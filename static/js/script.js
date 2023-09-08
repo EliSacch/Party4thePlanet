@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    const mapDiv = $('#map');
+    if (mapDiv) {
+        initMap();
+    }
     $('.eventCard').click(function (e) {
         const id = $(this).attr('data-id');
         display_event(id);
@@ -7,7 +11,7 @@ $(document).ready(function () {
 );
 
 function display_event(id) {
-    var results = []
+    var result = {}
     var token = $("input[name=csrfmiddlewaretoken]").val();
 
     $.ajax({
@@ -20,7 +24,8 @@ function display_event(id) {
         success: function (json) {
             $('#placeholder-image').hide();
             $.each(JSON.parse(json.selected_event), function (index, event) {
-                results.push(event.fields)
+                result = event.fields
+                console.log(event.fields)
             })
 
             $('#result').html(
@@ -31,24 +36,24 @@ function display_event(id) {
                 </div>
                 <div class="eventDetailsContainer">
                     <div class="eventName">
-                    <h2>${results[0].title}</h2>
+                    <h2>${result.title}</h2>
                     </div>
                     <div class="eventInformations">
                         <p class="eventStartTime">
-                            Start Date: ${results[0].start_datetime}
+                            Start Date: ${result.start_datetime}
                         </p>
                         <p class="eventEndTime">
-                            End Date: ${results[0].end_datetime}
+                            End Date: ${result.end_datetime}
                         </p>
                         <p class="eventParticipantsCounter">
                             203<i class="fa-solid fa-people-group"></i>
                         </p>
-                        <p class="eventLocation">Location:${results[0].location}
+                        <p class="eventLocation">Location:${result.location}
                         <p class="eventOrganiser">
-                            Organised by: ${results[0].organizer}
+                            Organised by: ${result.organizer}
                         </p>
                         <p class="eventDescription">
-                            Description: ${results[0].description}
+                            Description: ${result.description}
                         </p>
                     </div>
                 </div>
@@ -68,4 +73,31 @@ function display_event(id) {
             $('#spinner').hide();
         }
     })
+}
+
+
+var map;
+async function initMap() {
+    const { Map } = await google.maps.importLibrary("maps");
+  
+    map = new Map(document.getElementById("map"), {
+      center: { lat: 53.44947, lng: -7.52297 },
+      zoom: 8,
+    });
+  }
+
+
+var map;
+async function initMap() {
+    const { Map } = await google.maps.importLibrary("maps");
+  
+    map = new Map(document.getElementById("map"), {
+      center: { lat: 53.44947, lng: -7.52297 },
+      zoom: 8,
+    });
+  }
+
+// function to open Filter dropdown
+function filterMenuOpen() {
+    document.getElementById("filterDropdown").classList.toggle("show");
 }

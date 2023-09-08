@@ -1,28 +1,11 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
 
-<div class="headerContainer">
-  <img
-    class="logoHeader"
-    src="../static/images/Logo Party 4 The planet v2.png"
-    alt="Logo Party for the Planet"
-  />
-  <h1 class="eventsTitle">Party for the planet</h1>
-  <div class="profileContainer">
-    <a href="{% url 'profile' %}"><i class="fa-solid fa-seedling"></i></a>
-    <p>My profile</p>
-  </div>
-  <div class="switchPages">
-    <div class="incomingSwitchContainer">
-      <a href="{% url 'events' %}">Incoming</a>
-    </div>
-    <div class="mapSwitchContainer">
-      <a href="{% url 'map' %}">Map</a>
-    </div>
-    <div class="createSwitchContainer">
-      <a href="{% url 'create_event' %}">Create</a>
-    </div>
-  </div>
-</div>
+{% block content %}
+
+{% load static %}
+
+{% include 'header.html' %}
+
 <div class="createTitle">
   <h2>Create Event</h2>
 </div>
@@ -32,9 +15,24 @@
   action=""
   enctype="multipart/form-data"
 >
-  {% csrf_token %} {{ form.as_p }}
-
-  <button type="submit">Create Event</button>
+  {% csrf_token %} 
+  <ul>
+      <label for="title">Title:</label>
+      <p>{{ form.title }}</p>
+      <label for="description">Description:</label>
+      <p>{{ form.description }}</p>
+      <label for="category">Category:</label>
+      <p>{{ form.category }}</p>
+      <label for="start_datetime">Start Date:</label>
+      <p>{{ form.start_datetime }}</p>
+      <label for="end_datetime">End Date:</label>
+      <p>{{ form.end_datetime }}</p>
+      <label for="location">Location:</label>
+      <p>{{ form.location }}</p>
+      <button class="" type="submit">Create Event</button>
+  </ul>
+ 
+</form>
 
   {% endblock %} ```
-</form>
+

@@ -6,42 +6,34 @@
 
 {% block content %}
 
+{% include 'header.html' %}
 <!-- Edit this section -->
-<div class="headerContainer">
-  <img
-    class="logoHeader"
-    src="../static/images/Logo Party 4 The planet v2.png"
-    alt="Logo Party for the Planet"
-  />
-  <h1 class="eventsTitle">Party for the planet</h1>
-  <div class="profileContainer">
-    <a href="{% url 'profile' %}"><i class="fa-solid fa-seedling"></i></a>
-    <p>My profile</p>
-  </div>
-  <div class="switchPages">
-    <div class="incomingSwitchContainer">
-      <a href="{% url 'events' %}">Incoming</a>
-    </div>
-    <div class="mapSwitchContainer">
-      <a href="{% url 'map' %}">Map</a>
-    </div>
-    <div class="createSwitchContainer">
-      <a href="{% url 'create_event' %}">Create</a>
-    </div>
-  </div>
-</div>
 
 <div class="eventsFiltersContainer">
   <div class="eventsSubtitleBackground">
     <h2 class="eventsSubtitle">Events</h2>
   </div>
-  <a href="{% url 'events' %}?category=Seminar" class="filterButton"> <!--Removed button and styled anchors as buttons-->
+
+ <!--<a href="{% url 'events' %}?category=Seminar" class="filterButton"> Removed button and styled anchors as buttons
     Seminar<i class="fa-solid fa-sliders"></i>
   </a>
-  <a href="{% url 'events' %}?category=Clean-up" class="filterButton"> <!--Removed button and styled anchors as buttons-->
+  <a href="{% url 'events' %}?category=Clean-up" class="filterButton"> 
     Clean-up<i class="fa-solid fa-sliders"></i>
-</a>
+  </a>-->
+
+
+
+  <div class="filtermenu">
+    <button onclick="filterMenuOpen()" class="dropbtn">Categories</button>
+    <ul id="filterDropdown" class="dropdown-content">
+      <li><a id="menutop" href="{% url 'events' %}?category=Seminar">Seminar</a></li>
+      <li><a href="{% url 'events' %}?category=Clean-up">Clean-up</a></li>
+      <li> <a href="#contact">More...</a></li>
+    </ul>
+  </div>
+
 </div>
+
 <div class="eventsContainer">
   <div class="leftSide">
     {% if events %}

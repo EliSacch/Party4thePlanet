@@ -11,25 +11,18 @@
 
 {% include 'header.html' %}
 
-{{markers}}
-
 <!-- Edit this section -->
-
+<input id="hidden" type="hidden" value="{{ events }}" />
 <div class="mapElementContainer">
+  
   <div class="leftMapSide">
     <!-- For All Categories , create a card like the next one. -->
+
+    {% for category in categories %}
     <div class="categoriesNameContainer">
-      <h2>Clean walk</h2>
-      <!--This is the categories name variable-->
+      <h2>{{ category }}</h2>
     </div>
-    <div class="categoriesNameContainer">
-      <h2>Initiation to beekeeping</h2>
-      <!--This is the categories name variable-->
-    </div>
-    <div class="categoriesNameContainer">
-      <h2>Eco-market</h2>
-      <!--This is the categories name variable-->
-    </div>
+    {% endfor %}
   </div>
   
   <div id="map" class="rightMapSide"></div>

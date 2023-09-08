@@ -1,5 +1,6 @@
 import os
 import requests
+import datetime
 
 from django.shortcuts import render, redirect
 from .models import Ecoevent
@@ -17,7 +18,8 @@ def home(request):
 
 
 def events(request):
-    all_events = Ecoevent.objects.all()
+    now = datetime.datetime.now()
+    all_events = Ecoevent.objects.all().filter(start_datetime__gte=now)
     category = request.GET.get("category")
     if category:
         events = all_events.filter(category=category)
@@ -46,8 +48,8 @@ def event(request, event_id):
 
 
 def map(request):
-    
-    addr_ex = ["Marina Market, Centre Park Rd, Cork, T12 YX76"]
+    now = datetime.datetime.now()
+    all_events = Ecoevent.objects.all().filter(start_datetime__gte=now)
 
     # Start code from CodingEntepreneurs https://www.youtube.com/watch?v=ckPEY2KppHc
     def extract_coordinates(address):
@@ -68,9 +70,19 @@ def map(request):
         return latlng.get("lat"), latlng.get("lng")
     # end of code from CodingEntepreneurs
 
-    markers = map(extract_coordinates, addr_ex)
+    events = []
+    categories = []
+
+    for event in all_events:
+        events.append({
+            "title": event.title,
+            "coordinates": extract_coordinates(event.location)
+        })
+        categories.append(event.category)
+    
     context = {
-        "markers": markers,
+        "events": json.dumps(events),
+        "categories": categories
     }
 
     return render(request, "map.html", context)

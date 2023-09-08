@@ -478,7 +478,8 @@ a {
   text-align: center;
   color: var(--main-color);
 }
-.createEventForm {
+.createEventForm,
+.editEventForm {
 
   margin: 0 auto;
   background-color: var(--accent-color);

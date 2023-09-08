@@ -4,7 +4,10 @@
     },
     "python.formatting.provider": "none",
     "cSpell.words": [
+        "allauth",
+        "astu",
         "Ecoevent",
-        "ecoevents"
+        "ecoevents",
+        "msajh"
     ]
 }

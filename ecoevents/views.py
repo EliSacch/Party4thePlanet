@@ -130,6 +130,23 @@ def createEvent(request):
     return render(request, "event_form.html", context)
 
 
+def editEvent(request, event_id):
+    event = Ecoevent.objects.get(pk=event_id)
+    form = EcoeventForm(instance=event)
+    if request.user == event.organizer:
+        if request.method == "POST":
+            form = EcoeventForm(request.POST, instance=event)
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Event updated successfully!")
+                return redirect("profile")
+    else:
+        return redirect("events")
+
+    context = {"form": form}
+    return render(request, "edit_event_form.html", context)
+
+
 def deleteEvent(request, event_id):
     event = Ecoevent.objects.get(pk=event_id)
     if request.user == event.organizer:
@@ -142,6 +159,7 @@ def deleteEvent(request, event_id):
     
     context = {"event": event}
     return render(request, "delete_event.html", context)
+
 
 def editUser(request, user_id):
     user = User.objects.get(pk=user_id)

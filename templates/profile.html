@@ -43,9 +43,9 @@
     <p>{{ event.start_datetime.location }}</p>
 
     <span class="action-buttons">
-      <button class="edit-event-btn">
+      <a class="edit-event-btn" href="{% url 'edit_event' event.id %}">
         <i class="fas fa-edit"></i>
-      </button>
+      </a>
       <a class="delete-event-btn" href="{% url 'delete_event' event.id %}">
         <i class="fas fa-trash"></i>
       </a>

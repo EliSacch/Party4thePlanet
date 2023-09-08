@@ -91,15 +91,12 @@ def map(request):
             "coordinates": extract_coordinates(event.location)
         })
         categories.append(event.category)
-
-    
     
     context = {
         "events": json.dumps(events),
         "categories": categories,
         'all_categories': all_categories,
     }
-
     return render(request, "map.html", context)
 
 

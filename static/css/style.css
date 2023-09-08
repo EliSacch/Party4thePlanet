@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik:ital@0;1&display=swap");
 /* Added 9/8/2023 */
+
 html{
   scroll-behavior: smooth;
 }
@@ -46,8 +47,7 @@ a {
   height: 50%;
   max-height: 120px;
   margin: 0 auto;
-  padding: 0 20px;
-  padding-bottom: 20px;
+  padding: 0 10px;
   border-radius: 22px;
   border: 25px double var(--main-color);
   grid-area: ws;
@@ -57,7 +57,8 @@ a {
   font-family: "Rubik";
   font-style: italic;
   color: var(--main-color);
-  font-size: 2rem;
+  font-size: 1.3rem;
+  margin-top: 15px;
   margin-bottom: 100px;
 }
 .logo {
@@ -75,7 +76,6 @@ a {
   border: none;
   border-radius: 50%;
   background: var(--secondary-color);
-  padding: 20px;
   width: 100px;
   height: 100px;
   text-align: center;  /* New */
@@ -84,8 +84,7 @@ a {
 }
 .transitionButton:hover {
   width: 120px;
-  height: 120px;
-  padding: 15px; 
+  height: 120px; 
   border: 5px double var(--main-color);
 }
 .transitionButton:focus { 
@@ -140,6 +139,14 @@ a {
 .profileContainer i {
   font-size: 5rem;
   color: var(--accent-color);
+}
+.profileContainer button{
+  font-family:"Rubik";
+  font-size:0.8rem;
+  border-radius: 22px;
+  border:1px solid var(--secondary-color);
+  color:var(--secondary-color);
+
 }
 .switchPages {
   display: flex;
@@ -209,25 +216,27 @@ a {
 * { box-sizing: border-box; }
 
 .filtermenu {
-  margin: auto;
+  /* margin: auto; */
+  width: 50%;
 }  
 .dropbtn {
   background-color: var(--secondary-color);;
   color: #e7fefe;
-  padding: 21px;
-  font-size: 20.6px;
+  text-align: center;
+  font-size: 1.3rem;
   border: none;
   cursor: pointer;
   font-family: "Rubik", sans-serif;
   border-radius: 30px;
-  width: 499.19px;
+  padding:20px;
+  width: 100%;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   overflow: hidden;
-  width: 499.19px;
+  width: 48%;
   list-style-type: none;
   margin-top: 0;
   padding-left: 0;
@@ -334,6 +343,9 @@ a {
   border-radius: 40px;
   margin-top: 30px;
 }
+#placeholder-image img{
+  height: 250px;
+}
 .eventImageContainer img {
   height: 200px;
 }
@@ -404,9 +416,13 @@ a {
   display: flex;
   justify-content: space-around;
   height: 50vh;
+  max-width: 90%;
 }
 .leftMapSide {
   width: 22%;
+  display: flex;
+  flex-direction: column;
+
 }
 .categoriesNameContainer {
   background-color: var(--accent-color);
@@ -424,6 +440,9 @@ a {
 .rightMapSide {
   width: 70%;
   background-color: var(--accent-color);
+  margin: 0 auto;
+  margin-bottom: 50px;
+  min-height: 415px;
 }
 
 
@@ -436,6 +455,7 @@ a {
   color: var(--main-color);
 }
 .createEventForm {
+
   margin: 0 auto;
   background-color: var(--accent-color);
   min-width: 300px;
@@ -443,7 +463,7 @@ a {
   padding: 20px;
   border-radius: 22px;
   color: var(--main-color);
-  margin-top: -50px;
+  margin:50px auto; 
 }
 /* Sign Up */
 .createEventForm :nth-child(2){
@@ -462,18 +482,19 @@ margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .createEventForm p{
   display: flex;
   flex-direction: column;
-  margin-bottom: -5px;
+  margin-bottom: 0px;
 }
 .createEventForm p input{
-  min-width: 250px;
   width: 100%;
   border-radius: 22px;
   border: none;
   padding: 5px;
+  margin-bottom: -5px;
 }
 .createEventForm p label{
   margin-bottom: 10px;
@@ -513,6 +534,11 @@ border-radius:22px ;
 padding: 5px;
 width: 100%;
 border: none;
+}
+textarea{
+  resize: none;
+width: 100%;
+border-radius: 22px;
 }
 .input{
   margin-bottom: 0px;
@@ -674,6 +700,17 @@ border: none;
   .profileInformationsContainer{
     font-size: 0.9rem;
   }
+  .mapElementContainer{
+   flex-direction: column;
+   margin: 50px auto;
+  }
+  .leftMapSide{
+    width: 70%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  }
 }
 @media screen and (max-width: 850px) {
   .eventsTitle {
@@ -716,8 +753,20 @@ border: none;
   .switchPages a{
     font-size: 0.9rem;
   }
+  .profileContainer i{
+    font-size: 3rem;
+  }
+  .categoriesNameContainer h2{
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 450px) {
+  .mainTitle{
+    font-size: 4rem;
+  }
+  .welcomeSentence{
+    font-size: 1rem;
+  }
   .eventsTitle {
     margin-bottom: 120px;
   }

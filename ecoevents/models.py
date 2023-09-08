@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Ecoevent(models.Model):
-    organizer = models.ForeignKey(User, on_delete=models.CASCADE,
-                                  related_name='recipes')
+    organizer = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=500, blank=True, null=True)
     category = models.CharField(max_length=200)

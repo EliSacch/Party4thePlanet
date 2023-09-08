@@ -36,13 +36,17 @@ def events(request):
     if request.method == "POST":
         id = int(request.POST.get("id", ""))
         if id is not None:
-            get_event = Ecoevent.objects.filter(id=id)
+            event = Ecoevent.objects.filter(id=id)
+            organizer = event[0].organizer.username
+            
             selected_event = serializers.serialize(
                 "json",
-                get_event,
+                event,
             )
-
-        return JsonResponse({"selected_event": selected_event})
+        return JsonResponse({
+            "selected_event": selected_event,
+            "organizer": organizer
+            })
 
     return render(request, "events.html", context)
 

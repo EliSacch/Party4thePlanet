@@ -20,23 +20,33 @@ def home(request):
 def events(request):
     now = datetime.datetime.now()
     all_events = Ecoevent.objects.all().filter(start_datetime__gte=now)
+    all_categories = []
+    for event in all_events:
+        all_categories.append(event.category)
     category = request.GET.get("category")
     if category:
         events = all_events.filter(category=category)
     else:
         events = all_events
-    context = {"events": events}
+    context = {
+        "events": events,
+        "all_categories": all_categories
+        }
 
     if request.method == "POST":
         id = int(request.POST.get("id", ""))
         if id is not None:
-            get_event = Ecoevent.objects.filter(id=id)
+            event = Ecoevent.objects.filter(id=id)
+            organizer = event[0].organizer.username
+            
             selected_event = serializers.serialize(
                 "json",
-                get_event,
+                event,
             )
-
-        return JsonResponse({"selected_event": selected_event})
+        return JsonResponse({
+            "selected_event": selected_event,
+            "organizer": organizer
+            })
 
     return render(request, "events.html", context)
 
@@ -72,6 +82,12 @@ def map(request):
 
     events = []
     categories = []
+    all_categories = []
+    for event in all_events:
+        all_categories.append(event.category)
+    category = request.GET.get("category")
+    if category:
+        all_events = all_events.filter(category=category)
 
     for event in all_events:
         events.append({
@@ -82,14 +98,17 @@ def map(request):
     
     context = {
         "events": json.dumps(events),
-        "categories": categories
+        "categories": categories,
+        'all_categories': all_categories,
     }
-
     return render(request, "map.html", context)
 
 
 def profile(request):
-    context = {}
+    my_events = Ecoevent.objects.filter(organizer=request.user)
+    context = {
+        "my_events": my_events,
+    }
     return render(request, "profile.html", context)
 
 
@@ -110,6 +129,19 @@ def createEvent(request):
     context = {"form": form}
     return render(request, "event_form.html", context)
 
+
+def deleteEvent(request, event_id):
+    event = Ecoevent.objects.get(pk=event_id)
+    if request.user == event.organizer:
+        if request.method == "POST":
+            event.delete()
+            messages.success(request, "Event deleted successfully!")
+            return redirect("profile")
+    else:
+        return redirect("events")
+    
+    context = {"event": event}
+    return render(request, "delete_event.html", context)
 
 def editUser(request, user_id):
     user = User.objects.get(pk=user_id)

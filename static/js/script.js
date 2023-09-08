@@ -43,8 +43,9 @@ function display_event(id) {
             $('#placeholder-image').hide();
             $.each(JSON.parse(json.selected_event), function (index, event) {
                 result = event.fields
-                console.log(event.fields)
             })
+
+            const organizer = (json.organizer)
 
             $('#result').html(
                 `
@@ -60,25 +61,14 @@ function display_event(id) {
                         <p class="eventEndTime">
                             End Date: ${result.end_datetime}
                         </p>
-                        <p class="eventParticipantsCounter">
-                            203<i class="fa-solid fa-people-group"></i>
-                        </p>
                         <p class="eventLocation">Location:${result.location}
                         <p class="eventOrganiser">
-                            Organised by: ${result.organizer}
+                            Organised by: ${organizer}
                         </p>
                         <p class="eventDescription">
                             Description: ${result.description}
                         </p>
                     </div>
-                </div>
-                <div class="eventButtonsContainer">
-                    <button class="joinButton">
-                    <p>Join</p>
-                    </button>
-                    <button class="shareButton">
-                    <p>Share</p>
-                    </button>
                 </div>
             </div>
             `);

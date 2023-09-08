@@ -17,11 +17,20 @@ class EcoeventForm(ModelForm):
             'end_datetime',
             'location'
             ]
+        
+        CHOICES = [
+            ("Clean-up", "Clean-up"),
+            ("Seminar", "Seminar"),
+            ("Pop shop", "Pop shop"),
+            ("Clothing swap", "Clothing swap"),
+            ("Other", "Other"),
+        ]
         widgets = {
             'start_datetime': forms.DateTimeInput(attrs={
                 'type': 'datetime-local'}),
             'end_datetime': forms.DateTimeInput(attrs={
                 'type': 'datetime-local'}),
+            'category': forms.Select(choices=CHOICES)
         }
 
 

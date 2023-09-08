@@ -538,6 +538,10 @@ padding: 5px;
 width: 100%;
 border: none;
 }
+textarea{
+  resize: none;
+
+}
 .input{
   margin-bottom: 0px;
 }

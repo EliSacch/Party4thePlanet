@@ -51,6 +51,10 @@ a {
   border-radius: 22px;
   border: 25px double var(--main-color);
   grid-area: ws;
+  display: flex;
+  align-items: center;  
+  justify-content: center;  
+  
 }
 .welcomeSentence {
   text-align: center;
@@ -60,6 +64,7 @@ a {
   font-size: 1.3rem;
   margin-top: 15px;
   margin-bottom: 100px;
+
 }
 .logo {
   grid-area: lo;
@@ -97,8 +102,7 @@ a {
 .transitionButton .fa-solid {
   font-size: 4rem;  /* This is to set the size of the icon */
   margin: 0 auto;
-  position: relative;
-  top: 20px;
+  color: white;
 }
 .fa-solid, .fas {
   font-weight: 900;
@@ -136,17 +140,37 @@ a {
   grid-area: pro;
   color: var(--accent-color);
 }
+
 .profileContainer i {
   font-size: 5rem;
   color: var(--accent-color);
 }
-.profileContainer button{
-  font-family:"Rubik";
-  font-size:0.8rem;
-  border-radius: 22px;
-  border:1px solid var(--secondary-color);
-  color:var(--secondary-color);
 
+.profileContainer button {
+  font-family: "Rubik";
+  font-size: 0.8rem;
+  border-radius: 22px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent; 
+  transition: background-color 0.3s, color 0.3s; 
+  cursor: pointer; 
+}
+
+.profileContainer button:hover {
+  background-color: var(--secondary-color); 
+  color: white;
+}
+
+.profileContainer a {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+  padding: 10px 20px; 
+}
+
+.profileContainer a:hover {
+  text-decoration: none; 
 }
 .switchPages {
   display: flex;

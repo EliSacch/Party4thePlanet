@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik:ital@0;1&display=swap");
 /* Added 9/8/2023 */
+
 html{
   scroll-behavior: smooth;
 }
@@ -141,6 +142,14 @@ a {
   font-size: 5rem;
   color: var(--accent-color);
 }
+.profileContainer button{
+  font-family:"Rubik";
+  font-size:0.8rem;
+  border-radius: 22px;
+  border:1px solid var(--secondary-color);
+  color:var(--secondary-color);
+
+}
 .switchPages {
   display: flex;
   justify-content: space-around;
@@ -209,18 +218,20 @@ a {
 * { box-sizing: border-box; }
 
 .filtermenu {
-  margin: auto;
+  /* margin: auto; */
+  width: 50%;
 }  
 .dropbtn {
   background-color: var(--secondary-color);;
   color: #e7fefe;
-  padding: 21px;
-  font-size: 20.6px;
+  text-align: center;
+  font-size: 1.3rem;
   border: none;
   cursor: pointer;
   font-family: "Rubik", sans-serif;
   border-radius: 30px;
-  width: 499.19px;
+  padding:20px;
+  width: 100%;
 }
 
 .dropdown-content {
@@ -334,6 +345,9 @@ a {
   border-radius: 40px;
   margin-top: 30px;
 }
+#placeholder-image img{
+  height: 250px;
+}
 .eventImageContainer img {
   height: 200px;
 }
@@ -407,6 +421,9 @@ a {
 }
 .leftMapSide {
   width: 22%;
+  display: flex;
+  flex-direction: column;
+
 }
 .categoriesNameContainer {
   background-color: var(--accent-color);
@@ -675,6 +692,9 @@ border: none;
   .profileInformationsContainer{
     font-size: 0.9rem;
   }
+  .mapElementContainer{
+   flex-direction: column;
+  }
 }
 @media screen and (max-width: 850px) {
   .eventsTitle {
@@ -716,6 +736,9 @@ border: none;
 @media screen and (max-width: 500px) {
   .switchPages a{
     font-size: 0.9rem;
+  }
+  .profileContainer i{
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 450px) {

@@ -16,7 +16,7 @@
     <div class="profileContainer">
       <div><i class="fa-solid fa-seedling"></i></div>
       {% if request.user.is_authenticated %}
-      <a href="{% url 'profile' %}">{{ request.user.username}}'s profile</a>
+      <a href="{% url 'profile' %}">My profile</a>
       <br>
           <button type="button">
             <a href="{% url 'account_logout' %}" class="">LOGOUT</a>

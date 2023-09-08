@@ -6,9 +6,6 @@
 
 {% include 'header.html' %}
 
-<div class="createTitle">
-  <h2>Create Event</h2>
-</div>
 <form
   class="createEventForm"
   method="POST"
@@ -17,18 +14,40 @@
 >
   {% csrf_token %} 
   <ul>
-      <label for="title">Title:</label>
-      <p>{{ form.title }}</p>
-      <label for="description">Description:</label>
-      <p>{{ form.description }}</p>
-      <label for="category">Category:</label>
-      <p>{{ form.category }}</p>
-      <label for="start_datetime">Start Date:</label>
-      <p>{{ form.start_datetime }}</p>
-      <label for="end_datetime">End Date:</label>
-      <p>{{ form.end_datetime }}</p>
-      <label for="location">Location:</label>
-      <p>{{ form.location }}</p>
+    
+<div class="createTitle">
+  <h2>Create Event</h2>
+</div>
+<div class="field">
+  
+  <label class="label" for="title">Title:</label>
+  <p class="input">{{ form.title }}</p>
+</div>
+<div class="field">
+  
+  <label class="label" for="description">Description:</label>
+  <p class="input">{{ form.description }}</p>
+</div>
+<div class="field">
+  
+  <label class="label" for="category">Category:</label>
+  <p class="input">{{ form.category }}</p>
+</div>
+<div class="field">
+  
+  <label class="label" for="start_datetime">Start Date:</label>
+  <p class="input">{{ form.start_datetime }}</p>
+</div>
+<div class="field">
+  
+  <label class="label" for="end_datetime">End Date:</label>
+  <p class="input">{{ form.end_datetime }}</p>
+</div>
+<div class="field">
+  
+  <label class="label" for="location">Location:</label>
+  <p class="input">{{ form.location }}</p>
+</div>
       <button class="" type="submit">Create Event</button>
   </ul>
  

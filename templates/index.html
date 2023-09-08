@@ -19,8 +19,8 @@
     alt="Logo Party 4 The Planet"
   />
 </div>
-<button class="transitionButton">
-  <a href="{% url 'events' %}"><i class="fa-solid fa-arrow-down-long"></i></a>
-</button>
+<a href="{% url 'events' %}" class="transitionButton" aria-label="Go to Events page"> <!--Removed button and styled anchors as buttons-->
+  <i class="fa-solid fa-arrow-down-long"></i> 
+</a>
 
 {%endblock%}

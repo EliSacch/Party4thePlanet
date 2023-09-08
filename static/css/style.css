@@ -437,14 +437,56 @@ a {
 .createEventForm {
   margin: 0 auto;
   background-color: var(--accent-color);
-  width: 50%;
+  min-width: 300px;
+  width: 30%;
   padding: 20px;
-  display: grid;
-  grid-template-rows: 30% 10% 10% 10% 20% 10%;
-  grid-template-columns: 1fr 1fr;
   border-radius: 22px;
+  color: var(--main-color);
 }
 
+/* Sign In  */
+.createEventForm h1{
+  font-family: "Bungee Shade";
+  font-size: 2rem;
+  line-height: 39px;
+  color: var(--main-color);
+  margin-top: -10px;
+}
+
+.field{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.field label{
+  margin-bottom: 5px;
+  font-family: "Rubik";
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.field input{
+border-radius:22px ;
+padding: 5px;
+width: 100%;
+border: none;
+}
+.field:has(input[type=checkbox]){
+  display: block;
+}
+.field input[type=checkbox]{
+  width: 20%;
+}
+.primaryAction{
+  border-radius: 22px;
+  font-family: "Rubik";
+  padding: 5px;
+}
+
+.signInContainer{
+  display: flex;
+  justify-content: space-around;
+}
 @media screen and (max-width: 1000px) {
   /* LANDING PAGE RESPONSIVE */
   .heroLandingPage {
@@ -468,6 +510,9 @@ a {
   .eventsTitle {
     font-size: 3rem;
   }
+  .signInContainer{
+    display: block;
+  }
 }
 @media screen and (max-width: 670px) {
   .mainTitle {
@@ -490,6 +535,11 @@ a {
   }
   .rightSide {
     width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .switchPages a{
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 450px) {

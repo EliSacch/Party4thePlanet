@@ -29,6 +29,29 @@
     </button>
   </div>
 </div>
+
+</div>
+
+<div id="my-events">
+
+  <h2>My events</h2>
+  {% for event in my_events %}
+  <div class="event-card">
+    
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.start_datetime.date }}</p>
+    <p>{{ event.start_datetime.location }}</p>
+
+    <span class="action-buttons">
+      <button class="edit-event-btn">
+        <i class="fas fa-edit"></i>
+      </button>
+      <a class="delete-event-btn" href="{% url 'delete_event' event.id %}">
+        <i class="fas fa-trash"></i>
+      </a>
+    </span>
+  </div>
+  {% endfor %}
 </div>
 
 {%endblock%}

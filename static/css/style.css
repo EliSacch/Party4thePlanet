@@ -424,6 +424,7 @@ a {
 .rightMapSide {
   width: 70%;
   background-color: var(--accent-color);
+  margin-bottom: 50px;
 }
 
 

@@ -537,7 +537,8 @@ border: none;
 }
 textarea{
   resize: none;
-
+width: 100%;
+border-radius: 22px;
 }
 .input{
   margin-bottom: 0px;

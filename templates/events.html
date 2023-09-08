@@ -13,7 +13,6 @@
   <div class="eventsSubtitleBackground">
     <h2 class="eventsSubtitle">Events</h2>
   </div>
-
   <div class="filtermenu">
     <button id="dropBtn" onclick="filterMenuOpen()" class="dropbtn">Filters<i class="fa-solid fa-sliders"></i></button>
     <ul id="filterDropdown" class="dropdown-content">
@@ -40,9 +39,9 @@
         <div class="eventNameBackground">
           <li class="eventName">{{ event }}</li>
         </div>
-        <div class="eventDetails">
-          <p class="eventStart">Start date : {{event.start_datetime}}</p>
-          <p class="eventLocation">Location : {{event.location}}</p>
+        <div class="eventDetails">  <!-- F = FullMonthName, d = DayOfTheMonth, Y = Four-digit year, H = Two-digit hour (24hr), i = Two-digit minute   -->                                
+          <p class="eventStart">Start date: {{ event.start_datetime|date:"F d, Y, H:i" }}</p>
+          <p class="eventLocation">Location: {{event.location}}</p>
         </div>
       </div>
       {% endfor %}
@@ -51,7 +50,7 @@
 
   <div class="rightSide">
     <div id="placeholder-image">
-      <img src="../static/images/Logo Party 4 The planet.png" alt="" />
+      <img src="../static/images/p4p-no-background-placeholder.png" alt="Logo" />
     </div>
     <div id="result"></div>
   </div>

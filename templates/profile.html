@@ -5,21 +5,22 @@
 {% block content %}
 
 {% include 'header.html' %}
+<div class="profile">
 
-<div class="createTitle">
-  <h2>{{request.user}}'s Profile</h2>
-</div>
-<div class="createEventForm">
-  <div>
-    <p>Logged in user: {{request.user}}</p>
-    <p>First Name: {{request.user.first_name}}</p>
-    <p>Last Name: {{request.user.last_name}}</p>
-    <p>E-Mail: {{request.user.email}}</p>
-    <p>Username: {{request.user.username}}</p>
-    <p>Last Login: {{request.user.last_login}}</p>
-    <p>Date Joined: {{request.user.date_joined}}</p>
+  <div class="profileTitle">
+    <h2>{{request.user}}'s Profile</h2>
   </div>
-  <div>
+  <div class="profileInformationsContainer">
+    <div class="profileDetailsContainer">
+    <p class="profileLogged">Logged in user: {{request.user}}</p>
+    <p class="profileFirstName">First Name: {{request.user.first_name}}</p>
+    <p class="profileLastName">Last Name: {{request.user.last_name}}</p>
+    <p class="profileEmail">E-Mail: {{request.user.email}}</p>
+    <p class="profileUsername">Username: {{request.user.username}}</p>
+    <p class="profileLastLogin">Last Login: {{request.user.last_login}}</p>
+    <p class="profileDateJoined">Date Joined: {{request.user.date_joined}}</p>
+  </div>
+  <div class="profileButtons">
     <button>
       <a href="{% url 'edit_user' user.id %}">Edit</a>
     </button>
@@ -27,6 +28,7 @@
       <a href="{% url 'delete_user' user.id %}">Delete</a>
     </button>
   </div>
+</div>
 </div>
 
 {%endblock%}

@@ -6,13 +6,13 @@
 
 {% include 'header.html' %}
 
-<div class="createEventForm">
+<div class="deleteProfileForm">
     <p>Are you sure you want to delete {{request.user}}'s Profile?</p>
     <form class="" method="post" action="">
         {% csrf_token %}
 
-        <a type="" role="button" class="" href="javascript:history.go(-1)"> BACK </a>
         <button type="submit" class="" value="">CONFIRM</button>
+        <a type="" role="button" class="" href="javascript:history.go(-1)"> BACK </a>
     </form>
 </div>
 

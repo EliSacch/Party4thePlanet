@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 if os.path.isfile('env.py'):
-     import env  # noqa E402
+    import env  # noqa E402
 
 development = os.environ.get('DEV', False)
 

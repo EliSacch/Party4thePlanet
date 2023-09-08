@@ -138,5 +138,19 @@ async function initMap(locations, titles) {
 
 // function to open Filter dropdown
 function filterMenuOpen() {
-    document.getElementById("filterDropdown").classList.toggle("show");
+    var dropdown = document.getElementById("filterDropdown");
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
 }
+
+// Add an event listener to close the dropdown when clicking outside of it
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("filterDropdown");
+    var button = document.querySelector(".dropbtn");
+    if (event.target !== button && event.target !== dropdown) {
+        dropdown.style.display = "none";
+    }
+});

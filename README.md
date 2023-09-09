@@ -58,7 +58,7 @@ We would like to give credit to the following individuals and organizations that
 
 - Marcello Muylaert
   - [LinkedIn Profile](https://www.linkedin.com/in/marcello-muylaert-519b71201/)
-  - []()
+  - [GitHub](https://github.com/MarcelloMuy)
 
 ---
 
@@ -70,7 +70,6 @@ We would like to give credit to the following individuals and organizations that
 
 
 - 🌐 The function to get coordinates from address is drom [CodingEntepreneurs](https://www.youtube.com/watch?v=ckPEY2KppHc)
-- 🌐 [External Resource 2]
 
 # Wireframes and Flowchart 
 

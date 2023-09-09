@@ -31,7 +31,7 @@
       {% endif %}
   </div>
     <div class="switchPages">
-        <a class="incomingSwitchContainer"href="{% url 'events' %}">Incoming</a>
+        <a class="incomingSwitchContainer"href="{% url 'events' %}">Events</a>
         <a class="mapSwitchContainer" href="{% url 'map' %}">Map</a>
         {% if request.user.is_authenticated %}
         <a  class="createSwitchContainer" href="{% url 'create_event' %}">Create</a>

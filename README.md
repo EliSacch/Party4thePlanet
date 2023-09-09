@@ -1,6 +1,5 @@
 # Party4thePlanet 
-![image](static\images\final-landing.png)
-
+https://raw.githubusercontent.com/EliSacch/Party4thePlanet/main/static/images/final-landing.png
 ## Deployment
 The project is deployed and can be accessed @ [Party4ThePlanet](https://p4tp-7e492ba8bb6b.herokuapp.com/)
 
@@ -76,15 +75,15 @@ We would like to give credit to the following individuals and organizations that
 
 # Final product
 ## Landing Page
-![image](static\images\final-landing.png)
+![image](https://raw.githubusercontent.com/EliSacch/Party4thePlanet/main/static/images/final-landing.png)
 ## Create Event 
-![image](static\images\final-create-event.png)
+![image](https://github.com/EliSacch/Party4thePlanet/blob/main/static/images/final-create-event.png)
 ## User Event profile
-![image](static\images\final-event.png)
+![image](https://raw.githubusercontent.com/EliSacch/Party4thePlanet/main/static/images/final-event.png)
 ## Map
-![image](static\images\final-map.png)
+![image](https://raw.githubusercontent.com/EliSacch/Party4thePlanet/main/static/images/final-map.png)
 ## Mobile
-![image](static\images\final-mobile.png)
+![image](https://raw.githubusercontent.com/EliSacch/Party4thePlanet/main/static/images/final-mobile.png)
 
 # Wireframes and logic
 ## Landing Page

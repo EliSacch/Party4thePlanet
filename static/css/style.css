@@ -190,6 +190,13 @@ a {
   font-size: 5rem;
   color: var(--accent-color);
 }
+.profileImg{
+  display: flex;
+  flex-direction: column;
+}
+.profileImg i{
+margin-bottom: 10px;
+}
 
 .profileContainer button {
   font-family: "Rubik";
@@ -210,7 +217,6 @@ a {
 .profileContainer a {
   text-decoration: none; 
   color: inherit; 
-  display: block; 
   padding: 10px 20px; 
 }
 
@@ -633,6 +639,9 @@ margin-bottom: 5px;
   flex-direction: column;
   margin-bottom: 0px;
 }
+input{
+  font-family: "Rubik";
+}
 .createEventForm p input{
   width: 100%;
   border-radius: 22px;
@@ -687,6 +696,8 @@ textarea{
   resize: none;
 width: 100%;
 border-radius: 22px;
+padding: 10px;
+font-family: "Rubik";
 }
 .input{
   margin-bottom: 0px;

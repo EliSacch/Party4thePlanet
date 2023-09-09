@@ -7,7 +7,7 @@ html{
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   list-style-type: none;
   box-sizing: border-box;
   height: 100vh;
@@ -18,6 +18,7 @@ body {
   font-family: "Rubik", sans-serif;
   background: var(--main-color);
 }
+
 a {
   text-decoration: none;
 }
@@ -190,6 +191,13 @@ a {
   font-size: 5rem;
   color: var(--accent-color);
 }
+.profileImg{
+  display: flex;
+  flex-direction: column;
+}
+.profileImg i{
+margin-bottom: 10px;
+}
 
 .profileContainer button {
   font-family: "Rubik";
@@ -210,7 +218,6 @@ a {
 .profileContainer a {
   text-decoration: none; 
   color: inherit; 
-  display: block; 
   padding: 10px 20px; 
 }
 
@@ -397,12 +404,14 @@ a {
   width: 40%;
   height: 70px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .eventsFiltersContainer h2 {
   font-family: "Bungee Shade";
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: 10px;
   color: var(--main-color);
   letter-spacing: 5px;
 }
@@ -434,10 +443,25 @@ a {
   font-family: "Rubik";
   margin-left: 40px;;
 }
+
 .leftSide ul {
   margin: 0;
   padding: 0;
 }
+
+#scroll-events {
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 50px;
+  scrollbar-color: red;
+}
+
+
+#scroll-events > * {
+  scroll-snap-align: start;
+}
+
 .eventContainer {
   margin-top: 15px;
   padding: 10px;
@@ -485,7 +509,9 @@ a {
   height: 200px;
 }
 .eventDetailsContainer {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
+
 }
 .eventInformations {
   display: grid;
@@ -633,6 +659,9 @@ margin-bottom: 5px;
   flex-direction: column;
   margin-bottom: 0px;
 }
+input{
+  font-family: "Rubik";
+}
 .createEventForm p input{
   width: 100%;
   border-radius: 22px;
@@ -687,6 +716,8 @@ textarea{
   resize: none;
 width: 100%;
 border-radius: 22px;
+padding: 10px;
+font-family: "Rubik";
 }
 .input{
   margin-bottom: 0px;

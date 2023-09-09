@@ -35,19 +35,22 @@
       <h3 class="event-category-heading">All Events</h3>
     {% endif %}
     {% if events %}
-    <form method="post" action="{% url 'events' %}">
-      {% csrf_token %} {% for event in events %}
-      <div class="eventContainer eventCard" data-id="{{ event.id }}">
-        <ul class="eventNameBackground">
-          <li class="eventName">{{ event }}</li>
-        </ul>
-        <div class="eventDetails">  <!-- F = FullMonthName, d = DayOfTheMonth, Y = Four-digit year, H = Two-digit hour (24hr), i = Two-digit minute   -->                                
-          <p class="eventStart">Start date: {{ event.start_datetime|date:"F d, Y, H:i" }}</p>
-          <p class="eventLocation">Location: {{event.location}}</p>
+    <div id="scroll-events">
+      <form method="post" action="{% url 'events' %}">
+        {% csrf_token %} {% for event in events %}
+        <div class="eventContainer eventCard" data-id="{{ event.id }}">
+          <ul class="eventNameBackground">
+            <li class="eventName">{{ event }}</li>
+          </ul>
+          <div class="eventDetails">  <!-- F = FullMonthName, d = DayOfTheMonth, Y = Four-digit year, H = Two-digit hour (24hr), i = Two-digit minute   -->                                
+            <p class="eventStart">Start date: {{ event.start_datetime|date:"F d, Y, H:i" }}</p>
+            <p class="eventLocation">Location: {{event.location}}</p>
+          </div>
         </div>
-      </div>
-      {% endfor %}
-    </form>
+        {% endfor %}
+      </form>
+    </div>
+    {% endif %} 
   </div>
 
   <div class="rightSide">
@@ -57,4 +60,4 @@
     <div id="result"></div>
   </div>
 </div>
-{% endif %} {%endblock%}
+{%endblock%}

@@ -530,7 +530,13 @@ a {
   letter-spacing: 5px;
   line-height: 20px;
   color: var(--main-color);
+  margin-left: 50px;
   margin-bottom: 20px;
+}
+.categoriesNameContainer a{
+  color: var(--main-color);
+  font-family: "Rubik";
+  
 }
 .rightMapSide {
   width: 70%;
@@ -549,9 +555,11 @@ a {
   text-align: center;
   color: var(--main-color);
 }
+.formContainer{
+  margin-bottom: 50px;
+}
 .createEventForm,
 .editEventForm {
-
   margin: 0 auto;
   background-color: var(--accent-color);
   min-width: 300px;
@@ -559,7 +567,7 @@ a {
   padding: 20px;
   border-radius: 22px;
   color: var(--main-color);
-  margin:50px auto; 
+  margin:0px auto; 
 }
 /* Sign Up */
 .createEventForm :nth-child(2){
@@ -597,7 +605,7 @@ margin-bottom: 5px;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.createEventForm button[type=submit]{
+.createEventForm button[type=submit],.editEventForm button[type=submit]{
  font-family: "Rubik";
  padding: 6px;
  border-radius: 22px;
@@ -630,6 +638,10 @@ border-radius:22px ;
 padding: 5px;
 width: 100%;
 border: none;
+}
+
+.input select{
+  border-radius:22px;
 }
 textarea{
   resize: none;
@@ -746,6 +758,7 @@ border-radius: 22px;
   font-family: "Rubik";
   color: var(--secondary-color);
   border: 1px sold black;
+  border-radius: 22px;
   min-width: 15%;
   background-color: var(--main-color);
   text-align: center;

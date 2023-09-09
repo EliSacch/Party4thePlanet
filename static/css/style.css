@@ -63,7 +63,6 @@ a {
   color: var(--main-color);
   font-size: 1.3rem;
   margin-top: 15px;
-  margin-bottom: 100px;
 
 }
 .logo {
@@ -75,7 +74,10 @@ a {
   border-radius: 50%;
 }
 .transitionButton {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   margin: 0 auto;
   border: none;
@@ -198,42 +200,38 @@ a {
   text-align: center;
   height: 100%;
   background: var(--main-color);
-  border-radius: 22px 0 22px 22px;
+  border-radius: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.incomingSwitchContainer a {
   color: var(--secondary-color);
 }
+
 .mapSwitchContainer {
   width: 34%;
   text-align: center;
   height: 100%;
   background: var(--secondary-color);
-  border-radius: 0 0 8px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.mapSwitchContainer a {
   color: var(--main-color);
 }
+
 .createSwitchContainer {
   width: 33%;
   text-align: center;
   height: 100%;
+  border-radius:0px 22px 22px 0px;
   background: var(--accent-color);
-  border-radius: 0 22px 22px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.createSwitchContainer a {
   color: var(--main-color);
 }
+
 .eventsFiltersContainer {
   display: flex;
   justify-content: space-between;
@@ -315,6 +313,7 @@ a {
   padding:20px;
   width: 100%;
   border-radius: 30px;
+  height: 70px;
 }
 
 .dropbtnborder {
@@ -345,7 +344,7 @@ a {
 #menutop {
   padding-top: 10px;
 }
-#filterDropdown:last-child {
+#filterDropdown  li:last-child a {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -366,7 +365,7 @@ a {
   font-family: "Bungee Shade";
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: -15px;
+  margin-top: 8px;
   color: var(--main-color);
   letter-spacing: 5px;
 }
@@ -827,7 +826,6 @@ border-radius: 22px;
   }
   .welcomeSentence {
     font-size: 1.4rem;
-    margin-bottom: 0px;
   }
   .eventsContainer {
     display: block;

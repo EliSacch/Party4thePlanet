@@ -366,6 +366,7 @@ margin-bottom: 10px;
 }
 #filterDropdown {
   display: none;
+  width: inherit
 }
 .dropdown-content {
   display: none;
@@ -383,11 +384,12 @@ margin-bottom: 10px;
   display: block;
   background-color: #00a97c;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 #menutop {
   padding-top: 10px;
 }
+
 #filterDropdown  li:last-child a {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;

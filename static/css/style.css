@@ -114,7 +114,7 @@ a {
 
 .headerContainer {
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 60% 40%;
   grid-template-columns: 20% 60% 20%;
   grid-template-areas:
     "lo ti pro"
@@ -127,7 +127,7 @@ a {
   margin: 20px auto;
 }
 .eventsTitle {
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 70px;
   font-family: "Bungee Shade";
   color: var(--secondary-color);

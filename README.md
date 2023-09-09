@@ -1,4 +1,5 @@
 # Party4thePlanet 
+![image](static\images\final-landing.png)
 
 ## Deployment
 The project is deployed and can be accessed @ [Party4ThePlanet](https://p4tp-7e492ba8bb6b.herokuapp.com/)
@@ -60,7 +61,7 @@ We would like to give credit to the following individuals and organizations that
 
 - Marcello Muylaert
   - [LinkedIn Profile](https://www.linkedin.com/in/marcello-muylaert-519b71201/)
-  - []()
+  - [Github](https://github.com/MarcelloMuy)
 
 ---
 
@@ -71,14 +72,21 @@ We would like to give credit to the following individuals and organizations that
 - We would also like to thank SODA social and Code Institute for allowing us this oppourtunity to learn and display our our abilitys.
 
 
-- 🌐 [External Resource 1]
-- 🌐 [External Resource 2]
+- 🌐 [CodingEntepreneurs](https://www.youtube.com/watch?v=ckPEY2KppHc)
 
 # Final product
+## Landing Page
+![image](static\images\final-landing.png)
+## Create Event 
+![image](static\images\final-create-event.png)
+## User Event profile
+![image](static\images\final-event.png)
+## Map
+![image](static\images\final-map.png)
+## Mobile
+![image](static\images\final-mobile.png)
 
-
-# Wireframes and Flowchart 
-
+# Wireframes and logic
 ## Landing Page
 ![image](https://github.com/tlalexandre/Party4thePlanet/assets/120526785/5cce1629-967d-42db-9af3-20021876e885)
 ## Events

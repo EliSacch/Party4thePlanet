@@ -90,10 +90,13 @@ def map(request):
         all_events = all_events.filter(category=category)
 
     for event in all_events:
-        events.append({
-            "title": event.title,
-            "coordinates": extract_coordinates(event.location)
-        })
+        try:
+            events.append({
+                "title": event.title,
+                "coordinates": extract_coordinates(event.location)
+            })
+        except:
+            pass
         categories.append(event.category)
 
     context = {

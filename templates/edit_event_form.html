@@ -2,9 +2,11 @@
 
 {% block content %}
 
-{% load static %}
-
+{% block header %}
 {% include 'header.html' %}
+{% endblock header %}
+
+{% load static %}
 
 <form
   class="editEventForm"

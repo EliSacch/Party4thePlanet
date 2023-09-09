@@ -1,10 +1,12 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
+{% block header %}
+{% include 'header.html' %}
+{% endblock header %}
 
 {% block content %}
 
 {% load static %}
-
-{% include 'header.html' %}
 
 <form
   class="createEventForm"

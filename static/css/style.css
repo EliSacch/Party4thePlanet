@@ -208,7 +208,7 @@ a {
   text-align: center;
   height: 100%;
   background: var(--main-color);
-  border-radius: 22px 0 22px 22px;
+  border-radius: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +220,6 @@ a {
   text-align: center;
   height: 100%;
   background: var(--secondary-color);
-  border-radius: 0 0 8px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;
@@ -232,8 +231,8 @@ a {
   width: 33%;
   text-align: center;
   height: 100%;
+  border-radius:0px 22px 22px 0px;
   background: var(--accent-color);
-  border-radius: 0 22px 22px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;
@@ -263,7 +262,7 @@ a {
   align-items: center;
   padding: 0 0.5em;
   font-weight: 700;
-  border-radius: 15px;
+  border-radius: 40px;
   border: 5px solid var(--secondary-color);
   margin-bottom: 1rem;
   margin-right: 1rem;
@@ -749,13 +748,15 @@ border-radius: 22px;
   display: flex;
   justify-content: space-around;
 }
-.profileButtons button{
+
+.profileButtons a {
   padding: 5px;
   font-family: "Rubik";
   color: var(--secondary-color);
-  border-radius: 22px;
+  border: 1px sold black;
   min-width: 15%;
-  width: 75px;
+  background-color: var(--main-color);
+  text-align: center;
 }
 .deleteProfileForm{
   text-align: center;

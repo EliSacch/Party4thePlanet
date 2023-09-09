@@ -4,7 +4,9 @@
     This is the home page of the website.
 -->
 
-{% block header %} {% endblock header %} {% block content %}
+{% block header %} {% endblock header %} 
+
+{% block content %}
 
 <div class="heroLandingPage">
   <h1 class="mainTitle">Party 4 the Planet</h1>
@@ -15,9 +17,9 @@
   </div>
   <img
     class="logo"
-    src="../static/images/Logo Party 4 The planet v2.png"
+    src="../static/images/Logo-Party-4-The-planet-v2.png"
     alt="Logo Party 4 The Planet"
-  />
+  >
 </div>
 <a href="{% url 'events' %}" class="transitionButton" aria-label="Go to Events page"> <!--Removed button and styled anchors as buttons-->
   <i class="fa-solid fa-arrow-down-long"></i> 

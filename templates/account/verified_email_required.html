@@ -1,10 +1,14 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Verify Your Email Address" %}{% endblock %}
 
 {% block content %}
+
+{% include 'header.html' %}
+
+<div class="createEventForm">
 <h1>{% trans "Verify Your Email Address" %}</h1>
 
 {% url 'account_email' as email_url %}
@@ -18,6 +22,6 @@ verification. Please click on the link inside that email. If you do not see the 
 contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
 
 <p>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your email address</a>.{% endblocktrans %}</p>
-
+</div>
 
 {% endblock %}

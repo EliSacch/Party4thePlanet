@@ -902,6 +902,9 @@ font-family: "Rubik";
   .profileTitle{
     font-size: 0.8rem;
   }
+  .leftMapSide{
+    margin-top:120px ;
+  }
 }
 @media screen and (max-width: 670px) {
   .mainTitle {
@@ -926,6 +929,9 @@ font-family: "Rubik";
   }
   .profileDetailsContainer{
     display: block;
+  }
+  .leftMapSide{
+    margin-top:290px ;
   }
 }
 @media screen and (max-width: 500px) {

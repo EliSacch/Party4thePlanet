@@ -133,6 +133,14 @@ a {
   /* margin: 70px auto; */
   margin-left: 5%;
 }
+.event-card{
+  border: 5px solid var(--secondary-color);
+  border-radius: 22px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: var(--accent-color);
+  overflow: hidden;
+}
 .event-category-heading {
   color: #00a97c;
   text-align: center;

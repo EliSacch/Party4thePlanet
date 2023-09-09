@@ -24,12 +24,8 @@
     <p class="profileDateJoined">Date Joined: {{request.user.date_joined}}</p>
   </div>
   <div class="profileButtons">
-    <button>
       <a href="{% url 'edit_user' user.id %}">Edit</a>
-    </button>
-    <button>
       <a href="{% url 'delete_user' user.id %}">Delete</a>
-    </button>
   </div>
 </div>
 

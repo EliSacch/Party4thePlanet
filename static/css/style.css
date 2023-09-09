@@ -200,7 +200,7 @@ a {
   text-align: center;
   height: 100%;
   background: var(--main-color);
-  border-radius: 22px 0 22px 22px;
+  border-radius: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,7 +212,6 @@ a {
   text-align: center;
   height: 100%;
   background: var(--secondary-color);
-  border-radius: 0 0 8px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;
@@ -224,8 +223,8 @@ a {
   width: 33%;
   text-align: center;
   height: 100%;
+  border-radius:0px 22px 22px 0px;
   background: var(--accent-color);
-  border-radius: 0 22px 22px 8px;
   color: var(--main-color);
   display: flex;
   justify-content: center;

@@ -507,7 +507,9 @@ margin-bottom: 10px;
   height: 200px;
 }
 .eventDetailsContainer {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
+
 }
 .eventInformations {
   display: grid;

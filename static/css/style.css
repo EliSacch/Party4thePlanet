@@ -241,6 +241,62 @@ a {
   margin: 0 20px;
 }
 
+/*---------------------------------------------------- Django Messages */
+
+.alert-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  display: inline-flex;
+  gap: 3rem;
+  justify-self: center;
+  align-items: center;
+  padding: 0 0.5em;
+  font-weight: 700;
+  border-radius: 15px;
+  border: 5px solid var(--secondary-color);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.alert,
+.alert > .alert__message {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  max-width: 350px;
+}
+
+.alert.alert--error,
+.alert.alert--error > .alert__message {
+  background-color: RGB(206,38,28, 0.3);
+  color: var(--main-color);
+  max-width: 350px;
+}
+
+.alert.alert--success,
+.alert.alert--success > .alert__message {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  max-width: 350px;
+}
+
+.alert > .alert__close {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+  font-size: 2rem;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--main-color);
+}
+
+.alert > .alert__close:hover {
+  opacity: 0.85;
+}
+
 /*---------------------------------------------------- Categories Dropdown Menu */
 
 * { box-sizing: border-box; }

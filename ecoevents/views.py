@@ -29,9 +29,9 @@ def events(request):
     else:
         events = all_events
     context = {"events": events,
-        "all_categories": all_categories,
-        "category": category
-        }
+               "all_categories": all_categories,
+               "category": category
+               }
     if request.method == "POST":
         id = int(request.POST.get("id", ""))
         if id is not None:
@@ -60,7 +60,8 @@ def map(request):
     now = datetime.datetime.now()
     all_events = Ecoevent.objects.all().filter(start_datetime__gte=now)
 
-    # Start code from CodingEntepreneurs https://www.youtube.com/watch?v=ckPEY2KppHc
+    # Start code from CodingEntepreneurs
+    # https://www.youtube.com/watch?v=ckPEY2KppHc
     def extract_coordinates(address):
         # Get url from address
         endpoint = f"https://maps.googleapis.com/maps/api/geocode/json"
@@ -74,7 +75,7 @@ def map(request):
         latlng = {}
         try:
             latlng = r.json()['results'][0]['geometry']['location']
-        except:
+        except:  # noqa
             pass
         return latlng.get("lat"), latlng.get("lng")
     # end of code from CodingEntepreneurs
@@ -94,7 +95,7 @@ def map(request):
             "coordinates": extract_coordinates(event.location)
         })
         categories.append(event.category)
-    
+
     context = {
         "events": json.dumps(events),
         "categories": categories,
@@ -155,7 +156,7 @@ def deleteEvent(request, event_id):
             return redirect("profile")
     else:
         return redirect("events")
-    
+
     context = {"event": event}
     return render(request, "delete_event.html", context)
 

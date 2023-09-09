@@ -47,4 +47,17 @@
     </div>
   </div>
 
+  {% if messages %}
+
+  {% for message in messages %}
+  <div class="alert-container">
+      <div class="alert alert--{{ message.tags }}">
+          <p class="alert__message">{{ message }}</p>
+          <button class="alert__close">X</button>
+      </div>
+  </div>   
+  {% endfor %}
+
+  {% endif %}
+
 {% endblock content %}

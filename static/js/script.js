@@ -56,10 +56,10 @@ function display_event(id) {
                     </div>
                     <div class="eventInformations">
                         <p class="eventStartTime">
-                            Start Date: ${result.start_datetime}
+                            Start Date: ${result.start_datetime.substring(0, 10) + ", " + result.start_datetime.substring(11, 16)}
                         </p>
                         <p class="eventEndTime">
-                            End Date: ${result.end_datetime}
+                            End Date: ${result.end_datetime.substring(0, 10) + ", " + result.end_datetime.substring(11, 16)}
                         </p>
                         <p class="eventLocation">Location:${result.location}
                         <p class="eventOrganiser">
@@ -148,3 +148,13 @@ document.addEventListener("click", function(event) {
         button.classList.remove("dropbtnborder");
     }
 });
+
+// function to close message alert
+let alertWrapper = document.querySelector('.alert')
+let alertClose = document.querySelector('.alert__close')
+
+if (alertWrapper) {
+  alertClose.addEventListener('click', () =>
+    alertWrapper.style.display = 'none'
+  )
+}

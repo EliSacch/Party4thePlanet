@@ -454,7 +454,6 @@ margin-bottom: 10px;
   max-height: 400px;
   overflow-y: auto;
   margin-bottom: 50px;
-  scrollbar-color: red;
 }
 
 
@@ -722,9 +721,6 @@ font-family: "Rubik";
 .input{
   margin-bottom: 0px;
 }
-.field:has(input[type=checkbox]){
-  display: block;
-}
 .field input[type=checkbox]{
   width: 20%;
 }
@@ -828,7 +824,7 @@ font-family: "Rubik";
   padding: 5px;
   font-family: "Rubik";
   color: var(--secondary-color);
-  border: 1px sold black;
+  border: 1px bold black;
   border-radius: 22px;
   min-width: 15%;
   background-color: var(--main-color);

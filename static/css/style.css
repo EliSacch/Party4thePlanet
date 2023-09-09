@@ -427,7 +427,9 @@ a {
   max-height: 400px;
   overflow-y: auto;
   margin-bottom: 50px;
+  scrollbar-color: red;
 }
+
 
 #scroll-events > * {
   scroll-snap-align: start;

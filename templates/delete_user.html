@@ -10,11 +10,11 @@
 
 <div class="deleteProfileForm">
     <p>Are you sure you want to delete {{request.user}}'s Profile?</p>
-    <form class="" method="post" action="">
+    <form method="post">
         {% csrf_token %}
 
-        <button type="submit" class="" value="">Confirm</button>
-        <a type="" role="button" class="" href="javascript:history.go(-1)"> Back </a>
+        <button type="submit" value="">Confirm</button>
+        <a role="button" href="javascript:history.go(-1)"> Back </a>
     </form>
 </div>
 

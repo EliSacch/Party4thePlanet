@@ -1,4 +1,5 @@
 # Party4thePlanet 
+![image](static\images\final-landing.png)
 
 ## Deployment
 The project is deployed and can be accessed @ [Party4ThePlanet](https://p4tp-7e492ba8bb6b.herokuapp.com/)
@@ -24,6 +25,8 @@ Party4thePlanet aims to:
 ### Target Audience
 
 Environment enthusiasts, schools, community groups, and any individual or organization keen on participating in or hosting eco-centric events. This includes both those who are already passionate about the environment and those who are just beginning their journey towards being more environmental conscious.
+
+#### Persona's 
 
 ### Benefits
 
@@ -58,7 +61,7 @@ We would like to give credit to the following individuals and organizations that
 
 - Marcello Muylaert
   - [LinkedIn Profile](https://www.linkedin.com/in/marcello-muylaert-519b71201/)
-  - [GitHub](https://github.com/MarcelloMuy)
+  - [Github](https://github.com/MarcelloMuy)
 
 ---
 
@@ -69,10 +72,21 @@ We would like to give credit to the following individuals and organizations that
 - We would also like to thank SODA social and Code Institute for allowing us this oppourtunity to learn and display our our abilitys.
 
 
-- 🌐 The function to get coordinates from address is drom [CodingEntepreneurs](https://www.youtube.com/watch?v=ckPEY2KppHc)
+- 🌐 [CodingEntepreneurs](https://www.youtube.com/watch?v=ckPEY2KppHc)
 
-# Wireframes and Flowchart 
+# Final product
+## Landing Page
+![image](static\images\final-landing.png)
+## Create Event 
+![image](static\images\final-create-event.png)
+## User Event profile
+![image](static\images\final-event.png)
+## Map
+![image](static\images\final-map.png)
+## Mobile
+![image](static\images\final-mobile.png)
 
+# Wireframes and logic
 ## Landing Page
 ![image](https://github.com/tlalexandre/Party4thePlanet/assets/120526785/5cce1629-967d-42db-9af3-20021876e885)
 ## Events

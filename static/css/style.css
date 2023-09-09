@@ -234,7 +234,7 @@ a {
 
 .eventsFiltersContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 20px;
 }
@@ -365,7 +365,7 @@ a {
   font-family: "Bungee Shade";
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--main-color);
   letter-spacing: 5px;
 }
@@ -390,11 +390,12 @@ a {
 .eventsContainer {
   display: flex;
   justify-content: space-around;
-  margin: 0 20px;
+ 
 }
 .leftSide {
   width: 35%;
   font-family: "Rubik";
+  margin-left: 40px;;
 }
 .leftSide ul {
   margin: 0;
@@ -433,10 +434,11 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 55%;
+  width: 50%;
   border: 5px solid var(--secondary-color);
   border-radius: 40px;
   margin-top: 30px;
+  margin-left: 10px;
 }
 #placeholder-image img{
   height: 250px;
@@ -847,10 +849,10 @@ border-radius: 22px;
   }
   .eventsFiltersContainer h2 {
     font-size: 1.3rem;
-    margin-top: 9px;
   }
   .leftSide {
     width: 100%;
+    margin-left: 0;
   }
   .rightSide {
     width: 100%;
@@ -882,6 +884,6 @@ border-radius: 22px;
   }
   .eventsFiltersContainer h2 {
     font-size: 1rem;
-    margin-top: 15px;
-  }
+    margin-top: 25px;
+  } 
 }

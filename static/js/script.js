@@ -11,8 +11,10 @@ $(document).ready(function () {
     let titles = [];
     const events = JSON.parse($('#hidden').val());
     for (let event of events) {
-        locations.push({ lat: event.coordinates[0], lng: event.coordinates[1] });
-        titles.push(event.title)
+        if (event.coordinates.includes(null) == false) {
+            locations.push({ lat: event.coordinates[0], lng: event.coordinates[1] });
+            titles.push(event.title);
+        }
     }
 
     // If the map exists we initialize the map

@@ -8,15 +8,15 @@
     <a href="{% url 'home' %}">
     <img
       class="logoHeader"
-      src="{% static 'images/Logo Party 4 The planet v2.png' %}"
+      src="{% static 'images/logo-party4theplanet-v2.png' %}"
       alt="Logo Party for the Planet"
     />
     </a>
     <h1 class="eventsTitle">Party for the planet</h1>
     <div class="profileContainer">
-      <div><i class="fa-solid fa-seedling"></i></div>
+      <div></div>
       {% if request.user.is_authenticated %}
-      <a href="{% url 'profile' %}">My profile</a>
+      <a class="profileImg" href="{% url 'profile' %}"><i class="fa-solid fa-seedling"></i>My profile</a>
       <br>
           <button type="button">
             <a href="{% url 'account_logout' %}" class="">LOGOUT</a>

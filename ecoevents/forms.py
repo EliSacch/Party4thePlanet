@@ -17,7 +17,7 @@ class EcoeventForm(ModelForm):
             'end_datetime',
             'location'
             ]
-        
+
         CHOICES = [
             ("Clean-up", "Clean-up"),
             ("Seminar", "Seminar"),

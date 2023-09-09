@@ -2,9 +2,11 @@
 
 {% load static %}
 
-{% block content %}
-
+{% block header %}
 {% include 'header.html' %}
+{% endblock header %}
+
+{% block content %}
 
 <div class="deleteProfileForm">
     <p>Are you sure you want to delete {{request.user}}'s Profile?</p>

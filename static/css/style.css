@@ -234,7 +234,7 @@ a {
 
 .eventsFiltersContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 20px;
 }
@@ -365,7 +365,7 @@ a {
   font-family: "Bungee Shade";
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--main-color);
   letter-spacing: 5px;
 }
@@ -390,11 +390,12 @@ a {
 .eventsContainer {
   display: flex;
   justify-content: space-around;
-  margin: 0 20px;
+ 
 }
 .leftSide {
   width: 35%;
   font-family: "Rubik";
+  margin-left: 40px;;
 }
 .leftSide ul {
   margin: 0;
@@ -433,10 +434,11 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 55%;
+  width: 50%;
   border: 5px solid var(--secondary-color);
   border-radius: 40px;
   margin-top: 30px;
+  margin-left: 10px;
 }
 #placeholder-image img{
   height: 250px;
@@ -530,7 +532,13 @@ a {
   letter-spacing: 5px;
   line-height: 20px;
   color: var(--main-color);
+  margin-left: 50px;
   margin-bottom: 20px;
+}
+.categoriesNameContainer a{
+  color: var(--main-color);
+  font-family: "Rubik";
+  
 }
 .rightMapSide {
   width: 70%;
@@ -549,9 +557,11 @@ a {
   text-align: center;
   color: var(--main-color);
 }
+.formContainer{
+  margin-bottom: 50px;
+}
 .createEventForm,
 .editEventForm {
-
   margin: 0 auto;
   background-color: var(--accent-color);
   min-width: 300px;
@@ -559,7 +569,7 @@ a {
   padding: 20px;
   border-radius: 22px;
   color: var(--main-color);
-  margin:50px auto; 
+  margin:0px auto; 
 }
 /* Sign Up */
 .createEventForm :nth-child(2){
@@ -597,7 +607,7 @@ margin-bottom: 5px;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.createEventForm button[type=submit]{
+.createEventForm button[type=submit],.editEventForm button[type=submit]{
  font-family: "Rubik";
  padding: 6px;
  border-radius: 22px;
@@ -630,6 +640,10 @@ border-radius:22px ;
 padding: 5px;
 width: 100%;
 border: none;
+}
+
+.input select{
+  border-radius:22px;
 }
 textarea{
   resize: none;
@@ -746,6 +760,7 @@ border-radius: 22px;
   font-family: "Rubik";
   color: var(--secondary-color);
   border: 1px sold black;
+  border-radius: 22px;
   min-width: 15%;
   background-color: var(--main-color);
   text-align: center;
@@ -834,10 +849,10 @@ border-radius: 22px;
   }
   .eventsFiltersContainer h2 {
     font-size: 1.3rem;
-    margin-top: 9px;
   }
   .leftSide {
     width: 100%;
+    margin-left: 0;
   }
   .rightSide {
     width: 100%;
@@ -869,6 +884,6 @@ border-radius: 22px;
   }
   .eventsFiltersContainer h2 {
     font-size: 1rem;
-    margin-top: 15px;
-  }
+    margin-top: 25px;
+  } 
 }

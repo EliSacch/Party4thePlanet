@@ -26,7 +26,8 @@ def events(request):
 
     # Retrieve all categories
     for event in all_events:
-        all_categories.append(event.category)
+        if event.category not in all_categories:
+            all_categories.append(event.category)
 
     # filter
     category = request.GET.get("category")
@@ -74,7 +75,8 @@ def map(request):
     categories = []
     all_categories = []
     for event in all_events:
-        all_categories.append(event.category)
+        if event.category not in all_categories:
+            all_categories.append(event.category)
     category = request.GET.get("category")
     if category:
         all_events = all_events.filter(category=category)
@@ -117,7 +119,7 @@ def createEvent(request):
             # check if location is valid
             location = form.cleaned_data.get('location')
             if extract_coordinates(location) == (None, None):
-                messages.error(request, f"Invaid location: ${location}")
+                messages.error(request, f"Invaid location: {location}")
             else:
                 event.organizer = user
                 event.save()

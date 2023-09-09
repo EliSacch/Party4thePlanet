@@ -5,11 +5,11 @@
 <!--
     This is the page for a map.
 -->
-
+{% block header %}
+{% include 'header.html' %}
+{% endblock header %}
 
 {% block content %}
-
-{% include 'header.html' %}
 
 <!-- Edit this section -->
 <input id="hidden" type="hidden" value="{{ events }}" />

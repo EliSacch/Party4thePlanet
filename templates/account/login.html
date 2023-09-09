@@ -5,8 +5,12 @@
 {% block head_title %}
 {% trans "Sign In" %}
 {% endblock %} 
+
+{% block header %}
+{% include 'header.html' %}
+{% endblock header %}
+
 {%block content %}
- {% include 'header.html' %}
 
 <div class="createEventForm">
   <h1>{% trans "Sign In" %}</h1>

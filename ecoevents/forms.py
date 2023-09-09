@@ -23,6 +23,10 @@ class EcoeventForm(ModelForm):
             ("Seminar", "Seminar"),
             ("Pop shop", "Pop shop"),
             ("Clothing swap", "Clothing swap"),
+            ("Festival", "Festival"),
+            ("Gardening Workshop", "Gardening Workshop"),
+            ("Nature Walk", "Nature Walk"),
+            ("Eco-Art", "Eco-Art"),
             ("Other", "Other"),
         ]
         widgets = {

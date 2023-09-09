@@ -17,12 +17,16 @@ class EcoeventForm(ModelForm):
             'end_datetime',
             'location'
             ]
-        
+
         CHOICES = [
             ("Clean-up", "Clean-up"),
             ("Seminar", "Seminar"),
             ("Pop shop", "Pop shop"),
             ("Clothing swap", "Clothing swap"),
+            ("Festival", "Festival"),
+            ("Gardening Workshop", "Gardening Workshop"),
+            ("Nature Walk", "Nature Walk"),
+            ("Eco-Art", "Eco-Art"),
             ("Other", "Other"),
         ]
         widgets = {

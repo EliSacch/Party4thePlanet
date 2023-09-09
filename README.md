@@ -25,6 +25,8 @@ Party4thePlanet aims to:
 
 Environment enthusiasts, schools, community groups, and any individual or organization keen on participating in or hosting eco-centric events. This includes both those who are already passionate about the environment and those who are just beginning their journey towards being more environmental conscious.
 
+#### Persona's 
+
 ### Benefits
 
 The tracker serves as a hub for community-driven eco actions, ensuring that every individual has the opportunity to be part of the solution, creating ripples of change that can culminate into waves of environmental conservation and restoration.
@@ -71,6 +73,9 @@ We would like to give credit to the following individuals and organizations that
 
 - 🌐 [External Resource 1]
 - 🌐 [External Resource 2]
+
+# Final product
+
 
 # Wireframes and Flowchart 
 

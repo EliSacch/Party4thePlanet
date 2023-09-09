@@ -131,7 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/profile/user_id/'
 LOGOUT_REDIRECT_URL = '/events/'
 ACCOUNT_SIGNUP_REDIRECT_URL = "/events/"
 

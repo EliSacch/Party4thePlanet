@@ -549,9 +549,11 @@ a {
   text-align: center;
   color: var(--main-color);
 }
+.formContainer{
+  margin-bottom: 50px;
+}
 .createEventForm,
 .editEventForm {
-
   margin: 0 auto;
   background-color: var(--accent-color);
   min-width: 300px;
@@ -559,7 +561,7 @@ a {
   padding: 20px;
   border-radius: 22px;
   color: var(--main-color);
-  margin:50px auto; 
+  margin:0px auto; 
 }
 /* Sign Up */
 .createEventForm :nth-child(2){

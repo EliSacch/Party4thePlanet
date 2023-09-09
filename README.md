@@ -69,7 +69,7 @@ We would like to give credit to the following individuals and organizations that
 - We would also like to thank SODA social and Code Institute for allowing us this oppourtunity to learn and display our our abilitys.
 
 
-- 🌐 [External Resource 1]
+- 🌐 The function to get coordinates from address is drom [CodingEntepreneurs](https://www.youtube.com/watch?v=ckPEY2KppHc)
 - 🌐 [External Resource 2]
 
 # Wireframes and Flowchart 

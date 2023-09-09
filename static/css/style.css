@@ -126,21 +126,31 @@ a {
   grid-area: lo;
   margin: 20px auto;
 }
+.my-events-title {
+  font-family: "Bungee Shade";
+  text-align: center;
+  color: var(--secondary-color);
+}
+#my-events{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
 .eventsTitle {
+  font-family: "Bungee Shade";
   font-size: 4rem;
   line-height: 70px;
-  font-family: "Bungee Shade";
   color: var(--secondary-color);
   grid-area: ti;
   /* margin: 70px auto; */
   margin-left: 5%;
 }
 .event-card{
-  border: 5px solid var(--secondary-color);
-  border-radius: 22px;
-  width: 60%;
+  padding: 5px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 40px;
+  width: 33%;
   margin: 0 auto;
-  background-color: var(--accent-color);
   overflow: hidden;
 }
 .event-category-heading {

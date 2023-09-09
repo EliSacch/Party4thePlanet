@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block content %}
+
+{% include 'header.html' %}
+<div class="profile">
+
+  <div class="profileTitle">
+    <h2>{{request.user.first_name}}'s Profile</h2>
+  </div>
+  <div class="profileInformationsContainer">
+    <div class="profileDetailsContainer">
+    <p class="profileLogged">Logged in user: {{request.user}}</p>
+    <p class="profileFirstName">First Name: {{request.user.first_name}}</p>
+    <p class="profileLastName">Last Name: {{request.user.last_name}}</p>
+    <p class="profileEmail">E-Mail: {{request.user.email}}</p>
+    <p class="profileUsername">Username: {{request.user.username}}</p>
+    <p class="profileLastLogin">Last Login: {{request.user.last_login}}</p>
+    <p class="profileDateJoined">Date Joined: {{request.user.date_joined}}</p>
+  </div>
+  <div class="profileButtons">
+      <a href="{% url 'edit_user' user.id %}">Edit</a>
+      <a href="{% url 'delete_user' user.id %}">Delete</a>
+  </div>
+</div>
+
+</div>
+
+<div id="my-events">
+
+  <h2>My events</h2>
+  {% for event in my_events %}
+  <div class="event-card">
+    
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.start_datetime.date }}</p>
+    <p>{{ event.start_datetime.location }}</p>
+
+    <span class="action-buttons">
+      <a class="edit-event-btn" href="{% url 'edit_event' event.id %}">
+        <i class="fas fa-edit"></i>
+      </a>
+      <a class="delete-event-btn" href="{% url 'delete_event' event.id %}">
+        <i class="fas fa-trash"></i>
+      </a>
+    </span>
+  </div>
+  {% endfor %}
+</div>
+
+{%endblock%}

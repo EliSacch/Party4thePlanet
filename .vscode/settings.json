@@ -1,0 +1,28 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
+    "cSpell.words": [
+        "allauth",
+        "astu",
+        "clusterer",
+        "Clusterer",
+        "csrfmiddlewaretoken",
+        "datetime",
+        "Detailcard",
+        "dropbtn",
+        "dropbtnborder",
+        "Ecoevent",
+        "ecoevents",
+        "Entepreneurs",
+        "errmsg",
+        "filtermenu",
+        "Informations",
+        "latlng",
+        "menutop",
+        "msajh",
+        "Organised",
+        "Organiser"
+    ]
+}

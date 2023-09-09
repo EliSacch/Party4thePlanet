@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+<!--
+    This is the home page of the website.
+-->
+
+{% block header %} {% endblock header %} {% block content %}
+
+<div class="heroLandingPage">
+  <h1 class="mainTitle">Party 4 the Planet</h1>
+  <div class="sentenceContainer">
+    <p class="welcomeSentence">
+      A community-driven, empowering and green social media and more...
+    </p>
+  </div>
+  <img
+    class="logo"
+    src="../static/images/Logo-Party-4-The-planet-v2.png"
+    alt="Logo Party 4 The Planet"
+  >
+</div>
+<a href="{% url 'events' %}" class="transitionButton" aria-label="Go to Events page"> <!--Removed button and styled anchors as buttons-->
+  <i class="fa-solid fa-arrow-down-long"></i> 
+</a>
+
+{%endblock%}

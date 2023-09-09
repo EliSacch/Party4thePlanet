@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+<!--
+    This is the page for a map.
+-->
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<!-- Edit this section -->
+<input id="hidden" type="hidden" value="{{ events }}" />
+<div class="mapElementContainer">
+  
+  <div class="leftMapSide">
+    <!-- For All Categories , create a card like the next one. -->
+    <div class="categoriesNameContainer">
+      <a href="{% url 'map' %}">All categories</a>
+    </div>
+    {% for category in all_categories %}
+    <div class="categoriesNameContainer">
+      <a href="{% url 'map' %}?category={{ category }}">{{ category }}</a>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div id="map" class="rightMapSide"></div>
+  
+</div>
+{%endblock%}

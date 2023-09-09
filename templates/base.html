@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicon/favicon-32x32.png' %}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicon/favicon-16x16.png' %}"
+    >
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+
+    <title>{% block title %} P4P {% endblock title %}</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon.ico' %}"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- JQuery CDN link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Gggogle maps API -->
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC61MQCGCx-WPr-56jcCTp1zhG-yhTWEDY&callback=initMap"
+    async defer></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+    <!-- Custom JS -->
+    
+  </head>
+
+  <body>
+    <header>
+      {% block header %}
+      <!-- Header Goes here -->
+      {% endblock header %}
+    </header>
+
+    <main>
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- Fant awesome -->
+    <script
+      src="https://kit.fontawesome.com/2a30a0d914.js"
+      crossorigin="anonymous"
+    ></script>    
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+  
+</html>

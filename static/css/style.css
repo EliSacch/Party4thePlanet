@@ -1,0 +1,874 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik:ital@0;1&display=swap");
+/* Added 9/8/2023 */
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  height: 100vh;
+  --main-color: #e7fefe;
+  --secondary-color: #106751;
+  --accent-color: #00a97c;
+  font-family: "Bungee Shade ", cursive;
+  font-family: "Rubik", sans-serif;
+  background: var(--main-color);
+}
+a {
+  text-decoration: none;
+}
+
+/* LANDING PAGE */
+
+.heroLandingPage {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 70% 30%;
+  grid-template-areas:
+    "mt lo"
+    "ws lo";
+  margin-top: 5vh;
+  min-height: 80vh;
+}
+.mainTitle {
+  font-family: "Bungee Shade";
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 9em;
+  line-height: 140px;
+  grid-area: mt;
+}
+.sentenceContainer {
+  background-color: var(--accent-color);
+  height: 50%;
+  max-height: 120px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border-radius: 22px;
+  border: 25px double var(--main-color);
+  grid-area: ws;
+  display: flex;
+  align-items: center;  
+  justify-content: center;  
+  
+}
+.welcomeSentence {
+  text-align: center;
+  font-family: "Rubik";
+  font-style: italic;
+  color: var(--main-color);
+  font-size: 1.3rem;
+  margin-top: 15px;
+
+}
+.logo {
+  grid-area: lo;
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+  margin: 13% auto auto 3%;
+  border-radius: 50%;
+}
+.transitionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  width: 100px;
+  height: 100px;
+  text-align: center;  /* New */
+  line-height: 30px;   /*  New helps in vertically centering icon. adjust if needed. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /*  New smooth transition for hover and focus effects */
+}
+.transitionButton:hover {
+  width: 120px;
+  height: 120px; 
+  border: 5px double var(--main-color);
+}
+.transitionButton:focus { 
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* New */
+}
+.transitionButton:active {
+  transform: scale(0.95); /* New slight push effect */
+}
+.transitionButton .fa-solid {
+  font-size: 4rem;  /* This is to set the size of the icon */
+  margin: 0 auto;
+  color: white;
+}
+.fa-solid, .fas {
+  font-weight: 900;
+  margin-left: 1rem;
+}
+/* EVENTS */
+
+.headerContainer {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas:
+    "lo ti pro"
+    "lo sw pro";
+}
+.logoHeader {
+  width: 100%;
+  border-radius: 50%;
+  grid-area: lo;
+  margin: 20px auto;
+}
+.eventsTitle {
+  font-size: 4rem;
+  line-height: 70px;
+  font-family: "Bungee Shade";
+  color: var(--secondary-color);
+  grid-area: ti;
+  /* margin: 70px auto; */
+  margin-left: 5%;
+}
+.event-category-heading {
+  color: #00a97c;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+}
+.profileContainer {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1rem;
+  grid-area: pro;
+  color: var(--accent-color);
+}
+
+.profileContainer i {
+  font-size: 5rem;
+  color: var(--accent-color);
+}
+
+.profileContainer button {
+  font-family: "Rubik";
+  font-size: 0.8rem;
+  border-radius: 22px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent; 
+  transition: background-color 0.3s, color 0.3s; 
+  cursor: pointer; 
+}
+
+.profileContainer button:hover {
+  background-color: var(--secondary-color); 
+  color: white;
+}
+
+.profileContainer a {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+  padding: 10px 20px; 
+}
+
+.profileContainer a:hover {
+  text-decoration: none; 
+}
+.switchPages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  grid-area: sw;
+  border: 5px solid var(--secondary-color);
+  border-radius: 40px;
+  align-items: center;
+  font-family: "Rubik";
+  font-size: 1.3rem;
+  margin-top: 50px;
+}
+
+.incomingSwitchContainer {
+  width: 33%;
+  text-align: center;
+  height: 100%;
+  background: var(--main-color);
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+.mapSwitchContainer {
+  width: 34%;
+  text-align: center;
+  height: 100%;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.createSwitchContainer {
+  width: 33%;
+  text-align: center;
+  height: 100%;
+  border-radius:0px 22px 22px 0px;
+  background: var(--accent-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.eventsFiltersContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+/*---------------------------------------------------- Django Messages */
+
+.alert-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  display: inline-flex;
+  gap: 3rem;
+  justify-self: center;
+  align-items: center;
+  padding: 0 0.5em;
+  font-weight: 700;
+  border-radius: 40px;
+  border: 5px solid var(--secondary-color);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.alert,
+.alert > .alert__message {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  max-width: 350px;
+}
+
+.alert.alert--error,
+.alert.alert--error > .alert__message {
+  background-color: RGB(206,38,28, 0.3);
+  color: var(--main-color);
+  max-width: 350px;
+}
+
+.alert.alert--success,
+.alert.alert--success > .alert__message {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  max-width: 350px;
+}
+
+.alert > .alert__close {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+  font-size: 2rem;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--main-color);
+}
+
+.alert > .alert__close:hover {
+  opacity: 0.85;
+}
+
+/*---------------------------------------------------- Categories Dropdown Menu */
+
+* { box-sizing: border-box; }
+
+.filtermenu {
+  width: 50%;
+}  
+.dropbtn {
+  background-color: var(--secondary-color);;
+  color: #e7fefe;
+  text-align: center;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  padding:20px;
+  width: 100%;
+  border-radius: 30px;
+  height: 70px;
+}
+
+.dropbtnborder {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#filterDropdown {
+  display: none;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 0; 
+  width: 50%;
+}
+.dropdown-content a {
+  color: #e7fefe;
+  padding: 0px 21px 10px 21px;
+  text-decoration: none;
+  display: block;
+  background-color: #00a97c;
+  text-align: center;
+  margin-right: 20px;
+}
+#menutop {
+  padding-top: 10px;
+}
+#filterDropdown  li:last-child a {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.dropdown-content a:hover {background-color: var(--secondary-color)}
+
+.show {display:block;}
+
+/*------------------------------------------------------- End of Categories Dropdown Menu */
+
+.eventsSubtitleBackground {
+  background-color: var(--secondary-color);
+  border-radius: 40px;
+  width: 40%;
+  height: 70px;
+  text-align: center;
+}
+.eventsFiltersContainer h2 {
+  font-family: "Bungee Shade";
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 8px;
+  color: var(--main-color);
+  letter-spacing: 5px;
+}
+
+.filterButton {
+  border: 2px outset rgb(15, 209, 112);
+  background-color: var(--secondary-color);
+  font-size: 2rem;
+  width: 20rem; /* updated from 60px */
+  height: 40px; /* updated from 60px*/
+  border-radius: 25px; /* updated from 50% */
+  padding: 5px;
+  text-align: center;
+}
+.filterButton:hover {
+  text-decoration: none; /* Keeps the underline removed even on hover */
+}
+.fa-solid
+.filterButton a i {
+  color: var(--main-color);
+}
+.eventsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+.leftSide {
+  width: 35%;
+  font-family: "Rubik";
+}
+.leftSide ul {
+  margin: 0;
+  padding: 0;
+}
+.eventContainer {
+  margin-top: 15px;
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 40px;
+  cursor: pointer;
+  list-style-type: none;
+}
+.eventName {
+  background-color: var(--accent-color);
+  border-radius: 40px;
+  width: 80%;
+  margin: 0 auto;
+  border: 5px double var(--secondary-color);
+  color: var(--main-color);
+  text-align: center;
+  font-size: 20px;
+  padding: 0 10px;
+}
+.eventName a {
+  color: var(--main-color);
+  text-align: center;
+}
+.eventDetails {
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-color);
+}
+.rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+  border: 5px solid var(--secondary-color);
+  border-radius: 40px;
+  margin-top: 30px;
+}
+#placeholder-image img{
+  height: 250px;
+}
+.eventImageContainer img {
+  height: 200px;
+}
+.eventDetailsContainer {
+  width: 100%;
+}
+.eventInformations {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas:
+    "st st pa pa en en"
+    "lo lo pa pa eo eo"
+    "des des des des des des ";
+  text-align: center;
+  padding: 5px;
+}
+.eventInformations p {
+  margin-bottom: 10px;
+}
+.eventStartTime {
+  grid-area: st;
+  text-align: left;
+}
+.eventEndTime {
+  grid-area: en;
+  text-align: left;
+}
+.eventParticipantsCounter {
+  grid-area: pa;
+  text-align: center;
+}
+.eventLocation {
+  grid-area: lo;
+  text-align: left;
+}
+.eventOrganiser {
+  grid-area: eo;
+  text-align: left;
+}
+.eventDescription {
+  grid-area: des;
+}
+
+.eventButtonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.eventButtonsContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bungee Shade";
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  border-radius: 22px;
+  width: 25%;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+/* MAP  */
+.mapElementContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 50vh;
+  max-width: 90%;
+}
+.leftMapSide {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+
+}
+.categoriesNameContainer {
+  background-color: var(--accent-color);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-family: "Rubik";
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 20px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.rightMapSide {
+  width: 70%;
+  background-color: var(--accent-color);
+  margin: 0 auto;
+  margin-bottom: 50px;
+  min-height: 415px;
+}
+
+
+/* CREATE */
+
+.createTitle {
+  font-family: "Bungee Shade";
+  font-size:1.4rem;
+  text-align: center;
+  color: var(--main-color);
+}
+.createEventForm,
+.editEventForm {
+
+  margin: 0 auto;
+  background-color: var(--accent-color);
+  min-width: 300px;
+  width: 30%;
+  padding: 20px;
+  border-radius: 22px;
+  color: var(--main-color);
+  margin:50px auto; 
+}
+/* Sign Up */
+.createEventForm :nth-child(2){
+/* text-align: center; */
+font-size: 0.9rem;
+display: block;
+margin-top:5px;
+margin-bottom: 5px;
+}
+.createEventForm form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.createEventForm ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.createEventForm p{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+.createEventForm p input{
+  width: 100%;
+  border-radius: 22px;
+  border: none;
+  padding: 5px;
+  margin-bottom: -5px;
+}
+.createEventForm p label{
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.createEventForm button[type=submit]{
+ font-family: "Rubik";
+ padding: 6px;
+ border-radius: 22px;
+ font-size: 1rem;
+ margin: 20px auto 0;
+}
+/* Sign In  */
+.createEventForm h1{
+  font-family: "Bungee Shade";
+  font-size: 2rem;
+  line-height: 39px;
+  color: var(--main-color);
+  margin-top: -10px;
+}
+
+.field{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.field label{
+  margin-bottom: 5px;
+  font-family: "Rubik";
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.field input{
+border-radius:22px ;
+padding: 5px;
+width: 100%;
+border: none;
+}
+textarea{
+  resize: none;
+width: 100%;
+border-radius: 22px;
+}
+.input{
+  margin-bottom: 0px;
+}
+.field:has(input[type=checkbox]){
+  display: block;
+}
+.field input[type=checkbox]{
+  width: 20%;
+}
+.primaryAction{
+  border-radius: 22px;
+  font-family: "Rubik";
+  padding: 5px;
+}
+
+.signInContainer{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  /* LANDING PAGE RESPONSIVE */
+  .heroLandingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .sentenceContainer {
+    margin-bottom: 20px;
+  }
+  .transitionButton {
+    margin-bottom: 50px;
+  }
+}
+
+/* PROFILE */
+.profile{
+  border: 5px solid var(--secondary-color);
+  border-radius: 22px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: var(--accent-color);
+}
+.profileTitle{
+  font-family: "Bungee Shade";
+  font-size: 1.2rem;
+  color: var(--main-color);
+  text-align: center;
+}
+.profileTitle h2{
+  width: 100%;
+}
+.profileInformationsContainer{
+  width: 100%;
+  color: var(--main-color);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.profileDetailsContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  grid-template-areas: "lo lo""fn ln""un em""dj ll";
+  text-align: center;
+}
+.profileDetailsContainer p{
+  max-width: 80%;
+  border-radius: 22px;
+  margin: 10px auto;
+}
+.profileLogged{
+  grid-area: lo;
+}
+.profileFirstName{
+  grid-area: fn;
+}
+.profileLastName{
+  grid-area: ln;
+}
+.profileEmail{
+  grid-area: em;
+}
+.profileUsername{
+  grid-area: un;
+}
+.profileLastLogin{
+  grid-area: ll;
+}
+.profileDateJoined{
+  grid-area: dj;
+}
+.profileButtons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.profileButtons a {
+  padding: 5px;
+  font-family: "Rubik";
+  color: var(--secondary-color);
+  border: 1px sold black;
+  min-width: 15%;
+  background-color: var(--main-color);
+  text-align: center;
+}
+.deleteProfileForm{
+  text-align: center;
+  background-color: var(--accent-color);
+  border-radius: 22px;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--main-color);
+  font-size: 1.3rem;
+  padding: 10px;
+}
+.deleteProfileForm button, .deleteProfileForm a{
+  padding: 2px 10px;
+  font-family: "Rubik";
+  color: var(--secondary-color);
+  border-radius: 22px;
+  min-width: 15%;
+  width: 75px;
+  background: var(--main-color);
+  border: 2px solid var(--secondary-color);
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+.editTitle{
+  color: var(--secondary-color);
+  font-family: "Bungee Shade";
+  text-align: center;
+}
+.editUserForm{
+  text-align: center;
+  background-color: var(--accent-color);
+  border-radius: 22px;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--main-color);
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.editUserForm input{
+  border-radius: 22px;
+  font-family: "Rubik";
+  padding: 5px;
+  width: 80%;
+}
+@media screen and (max-width: 1060px) {
+  .profileInformationsContainer{
+    font-size: 0.9rem;
+  }
+  .mapElementContainer{
+   flex-direction: column;
+   margin: 50px auto;
+  }
+  .leftMapSide{
+    width: 70%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  }
+}
+@media screen and (max-width: 850px) {
+  .eventsTitle {
+    font-size: 3rem;
+  }
+  .signInContainer{
+    display: block;
+  }
+  .profileTitle{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  .mainTitle {
+    font-size: 5em;
+    line-height: 100px;
+  }
+  .welcomeSentence {
+    font-size: 1.4rem;
+  }
+  .eventsContainer {
+    display: block;
+  }
+  .eventsFiltersContainer h2 {
+    font-size: 1.3rem;
+    margin-top: 9px;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .rightSide {
+    width: 100%;
+  }
+  .profileDetailsContainer{
+    display: block;
+  }
+}
+@media screen and (max-width: 500px) {
+  .switchPages a{
+    font-size: 0.9rem;
+  }
+  .profileContainer i{
+    font-size: 3rem;
+  }
+  .categoriesNameContainer h2{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mainTitle{
+    font-size: 4rem;
+  }
+  .welcomeSentence{
+    font-size: 1rem;
+  }
+  .eventsTitle {
+    margin-bottom: 120px;
+  }
+  .eventsFiltersContainer h2 {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+}

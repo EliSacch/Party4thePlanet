@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% include 'header.html' %}
+<!--
+    This is the page for a single event.
+-->
+
+{% block content %}
+
+<!-- Edit this section -->
+<h1>Event</h1>
+<hr>
+<a href="{% url 'create_event' %}">Add Event</a>
+<hr>
+
+<p>Title: {{ event.title}}</p>
+<p>Description: {{ event.description }}</p>
+<p>Start: {{ event.start_datetime }}</p>
+<p>End: {{ event.end_datetime }}</p>
+<p>Location: {{ event.location }}</p>
+<p>Organizer: {{ event.organizer }}</p>
+<p>Created: {{ event.created_on }}</p>
+
+
+{%endblock%}

@@ -1,1 +1,6 @@
+__pycache__/
+env
 venv
+env.py
+/pycache/*
+*.py[cod]

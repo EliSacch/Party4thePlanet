@@ -61,6 +61,10 @@ We would like to give credit to the following individuals and organizations that
 - Marcello Muylaert
   - [LinkedIn Profile](https://www.linkedin.com/in/marcello-muylaert-519b71201/)
   - [Github](https://github.com/MarcelloMuy)
+ 
+- Kurt McGoona
+  - [LinkedIn Profile](https://www.linkedin.com/in/kurt-mcgoona-36b159182/)
+  - [Github](https://github.com/Kurtm36)
 
 ---
 
